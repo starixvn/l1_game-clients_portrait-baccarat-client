@@ -40,6 +40,7 @@ export const languages = {
         "invalid_bet": "无效投注",
         "invalid_deal_hands": "这数量手牌无效",
         "invalid_position": "无效位置",
+        "invalid_stake_level": "无效的赌注级别",
         "join_game": "加入游戏",
         "join_next_round": "您将在下一轮加入游戏。",
         "maintenance_time": "维护时间",

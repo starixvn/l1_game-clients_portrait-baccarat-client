@@ -40,6 +40,7 @@ export const languages = {
         "invalid_bet": "無效投注",
         "invalid_deal_hands": "這數量手牌無效",
         "invalid_position": "無效位置",
+        "invalid_stake_level": "無效的賭注級別",
         "join_game": "加入遊戲",
         "join_next_round": "您將在下一輪加入遊戲。",
         "maintenance_time": "維護時間",
