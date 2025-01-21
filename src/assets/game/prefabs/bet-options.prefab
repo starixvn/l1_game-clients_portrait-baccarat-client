@@ -83,7 +83,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "red4",
+    "_name": "big",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -2511,7 +2511,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "red3",
+    "_name": "playerPair",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -4934,7 +4934,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "red2",
+    "_name": "bankerPair",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -7357,7 +7357,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "white4",
+    "_name": "small",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -9780,7 +9780,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "white3",
+    "_name": "banker",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -12203,7 +12203,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "even",
+    "_name": "player",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -14371,7 +14371,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "odd",
+    "_name": "tie",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -16655,7 +16655,6 @@
       "__id__": 0
     },
     "fileId": "aeW3ULgKdDtqqKK8Y8rX1T",
-    "instance": null,
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": [
       {
