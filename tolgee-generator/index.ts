@@ -9,11 +9,13 @@ const CONFIG = {
     },
     languages: ["en", "id", "th", "vi", "zh_cn", "zh_tw"],
     namespaces: {
-        ui: {
-            namespace: "ui",
-            specificKeys: ["choice_big", "choice_small"]
+        list: ["Common", "BaccaratX", "blockchainBaccarat", "ui"],
+        specificKeys: {
+            ui: ["choice_big", "choice_small"],
+            blockchainBaccarat: ["banker_win"],
         },
-        main: ["Common", "BaccaratX", "blockchainBaccarat"],
+        shouldFilterKeys: (ns: string) => Object.keys(CONFIG.namespaces.specificKeys).includes(ns),
+        getSpecificKeys: (ns: string) => CONFIG.namespaces.specificKeys[ns as keyof typeof CONFIG.namespaces.specificKeys] || []
     },
     remoteKeys: {
         game_name: "gameNames",
@@ -39,7 +41,7 @@ function writeFile(fileName: string, content: string, extension = "ts") {
 const tg = Tolgee().use(DevTools()).init({
     ...CONFIG.tolgeeConfig,
     availableLanguages: CONFIG.languages,
-    ns: [...CONFIG.namespaces.main, CONFIG.namespaces.ui.namespace],
+    ns: CONFIG.namespaces.list,
 });
 
 tg.run();
@@ -63,20 +65,38 @@ tg.on("initialLoad", async () => {
         await tg.changeLanguage(languageId);
         languages[languageId] = {};
 
-        [CONFIG.namespaces.ui.namespace, ...CONFIG.namespaces.main].forEach((ns) => {
+        // First process namespaces with specific keys
+        const namespacesWithSpecificKeys = CONFIG.namespaces.list.filter(ns => CONFIG.namespaces.shouldFilterKeys(ns));
+        const namespacesWithFullKeys = CONFIG.namespaces.list.filter(ns => !CONFIG.namespaces.shouldFilterKeys(ns));
+
+        // Process namespaces with specific keys first
+        namespacesWithSpecificKeys.forEach((ns) => {
             tg.getAllRecords().forEach((record) => {
                 if (record.namespace == ns) {
                     languages[languageId][ns] = {};
                     record.data.forEach((value, key) => {
-                        // Handle UI namespace specific keys
-                        if (ns === CONFIG.namespaces.ui.namespace) {
-                            if (CONFIG.namespaces.ui.specificKeys.includes(key)) {
-                                languages[languageId][ns][key] = value as string;
-                            }
-                        } else {
-                            // Handle main namespaces (get all keys)
+                        if (CONFIG.namespaces.getSpecificKeys(ns).includes(key)) {
                             languages[languageId][ns][key] = value as string;
                         }
+
+                        // Handle remote names
+                        Object.entries(CONFIG.remoteKeys).forEach(([remoteKey, propertyName]) => {
+                            if (key === remoteKey) {
+                                remoteNames[propertyName][languageId] = value as string;
+                            }
+                        });
+                    });
+                }
+            });
+        });
+
+        // Then process namespaces with full keys
+        namespacesWithFullKeys.forEach((ns) => {
+            tg.getAllRecords().forEach((record) => {
+                if (record.namespace == ns) {
+                    languages[languageId][ns] = {};
+                    record.data.forEach((value, key) => {
+                        languages[languageId][ns][key] = value as string;
 
                         // Handle remote names
                         Object.entries(CONFIG.remoteKeys).forEach(([remoteKey, propertyName]) => {
