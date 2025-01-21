@@ -1,8 +1,38 @@
 import { DevTools, Tolgee } from "@tolgee/web";
 import fs from "fs";
 
+interface NamespaceConfig {
+    list: string[];
+    specificKeys: {
+        [key: string]: string[];
+    };
+    shouldFilterKeys: (ns: string) => boolean;
+    getSpecificKeys: (ns: string) => string[];
+}
+
+interface TolgeeConfig {
+    defaultLanguage: string;
+    apiKey: string;
+    apiUrl: string;
+    projectId: string;
+    defaultNs: string;
+}
+
+interface Config {
+    files: {
+        languageFolder: string;
+        remoteLocalizationPath: string;
+    };
+    languages: string[];
+    namespaces: NamespaceConfig;
+    remoteKeys: {
+        [key: string]: string;
+    };
+    tolgeeConfig: TolgeeConfig;
+}
+
 // Configuration constants
-const CONFIG = {
+const CONFIG: Config = {
     files: {
         languageFolder: "./src/assets/resources/i18n/",
         remoteLocalizationPath: "./src/remote/localization",
@@ -14,8 +44,10 @@ const CONFIG = {
             ui: ["choice_big", "choice_small"],
             blockchainBaccarat: ["banker_win"],
         },
-        shouldFilterKeys: (ns: string) => Object.keys(CONFIG.namespaces.specificKeys).includes(ns),
-        getSpecificKeys: (ns: string) => CONFIG.namespaces.specificKeys[ns as keyof typeof CONFIG.namespaces.specificKeys] || []
+        shouldFilterKeys: (ns: string) =>
+            Object.keys(CONFIG.namespaces.specificKeys).includes(ns),
+        getSpecificKeys: (ns: string) =>
+            CONFIG.namespaces.specificKeys[ns as keyof typeof CONFIG.namespaces.specificKeys] || []
     },
     remoteKeys: {
         game_name: "gameNames",
@@ -30,86 +62,77 @@ const CONFIG = {
     }
 };
 
-function writeFile(fileName: string, content: string, extension = "ts") {
-    fs.writeFileSync(`${fileName}.${extension}`, content, {
-        encoding: "utf8",
-        flag: "w",
-    });
-}
-
-// Initialize Tolgee with configuration
-const tg = Tolgee().use(DevTools()).init({
-    ...CONFIG.tolgeeConfig,
-    availableLanguages: CONFIG.languages,
-    ns: CONFIG.namespaces.list,
-});
-
-tg.run();
-
-tg.on("initialLoad", async () => {
-    const languages: {
+class TolgeeGenerator {
+    private tg: any;
+    private languages: {
         [languageId: string]: {
             [ns: string]: {
                 [key: string]: string;
             };
         };
     } = {};
+    private remoteNames: Record<string, Record<string, string>> = {};
 
-    let remoteNames: {
-        [propertyName: string]: {
-            [languageId: string]: string;
-        };
-    } = Object.values(CONFIG.remoteKeys).reduce((acc, key) => ({ ...acc, [key]: {} }), {});
+    constructor(private config: Config) {
+        this.initializeTolgee();
+        this.initializeRemoteNames();
+    }
 
-    for (const languageId of CONFIG.languages) {
-        await tg.changeLanguage(languageId);
-        languages[languageId] = {};
-
-        // First process namespaces with specific keys
-        const namespacesWithSpecificKeys = CONFIG.namespaces.list.filter(ns => CONFIG.namespaces.shouldFilterKeys(ns));
-        const namespacesWithFullKeys = CONFIG.namespaces.list.filter(ns => !CONFIG.namespaces.shouldFilterKeys(ns));
-
-        // Process namespaces with specific keys first
-        namespacesWithSpecificKeys.forEach((ns) => {
-            tg.getAllRecords().forEach((record) => {
-                if (record.namespace == ns) {
-                    languages[languageId][ns] = {};
-                    record.data.forEach((value, key) => {
-                        if (CONFIG.namespaces.getSpecificKeys(ns).includes(key)) {
-                            languages[languageId][ns][key] = value as string;
-                        }
-
-                        // Handle remote names
-                        Object.entries(CONFIG.remoteKeys).forEach(([remoteKey, propertyName]) => {
-                            if (key === remoteKey) {
-                                remoteNames[propertyName][languageId] = value as string;
-                            }
-                        });
-                    });
-                }
+    private initializeTolgee(): void {
+        this.tg = Tolgee()
+            .use(DevTools())
+            .init({
+                ...this.config.tolgeeConfig,
+                availableLanguages: this.config.languages,
+                ns: this.config.namespaces.list,
             });
+    }
+
+    private initializeRemoteNames(): void {
+        this.remoteNames = Object.fromEntries(
+            Object.values(this.config.remoteKeys).map(key => [key, {}])
+        );
+    }
+
+    private writeFile(fileName: string, content: string, extension = "ts"): void {
+        fs.writeFileSync(
+            `${fileName}.${extension}`,
+            content,
+            { encoding: "utf8", flag: "w" }
+        );
+    }
+
+    private processRemoteKeys(key: string, value: string, languageId: string): void {
+        Object.entries(this.config.remoteKeys).forEach(([remoteKey, propertyName]) => {
+            if (key === remoteKey) {
+                this.remoteNames[propertyName][languageId] = value;
+            }
         });
+    }
 
-        // Then process namespaces with full keys
-        namespacesWithFullKeys.forEach((ns) => {
-            tg.getAllRecords().forEach((record) => {
-                if (record.namespace == ns) {
-                    languages[languageId][ns] = {};
-                    record.data.forEach((value, key) => {
-                        languages[languageId][ns][key] = value as string;
+    private processNamespaceKeys(
+        record: any,
+        ns: string,
+        languageId: string,
+        filterKeys = false
+    ): void {
+        if (record.namespace === ns) {
+            this.languages[languageId][ns] = {};
 
-                        // Handle remote names
-                        Object.entries(CONFIG.remoteKeys).forEach(([remoteKey, propertyName]) => {
-                            if (key === remoteKey) {
-                                remoteNames[propertyName][languageId] = value as string;
-                            }
-                        });
-                    });
+            record.data.forEach((value: string, key: string) => {
+                const shouldIncludeKey = !filterKeys ||
+                    (filterKeys && this.config.namespaces.getSpecificKeys(ns).includes(key));
+
+                if (shouldIncludeKey) {
+                    this.languages[languageId][ns][key] = value;
                 }
-            });
-        });
 
-        // Generate language file content
+                this.processRemoteKeys(key, value, languageId);
+            });
+        }
+    }
+
+    private generateLanguageFile(languageId: string): void {
         const languageScript = `const win = window as any;
 export const languages = {0};
 
@@ -119,20 +142,65 @@ if (!win.languages) {
 
 win.languages.${languageId} = languages;`;
 
-        writeFile(
-            CONFIG.files.languageFolder + languageId,
-            languageScript.replace("{0}", JSON.stringify(languages[languageId], null, 4))
+        this.writeFile(
+            this.config.files.languageFolder + languageId,
+            languageScript.replace("{0}", JSON.stringify(this.languages[languageId], null, 4))
         );
     }
 
-    // Generate index file
-    const indexContent = CONFIG.languages
-        .map(lang => `export * as ${lang} from "./${lang}";`)
-        .join('\n');
-    writeFile(CONFIG.files.languageFolder + "index", indexContent);
+    private generateIndexFile(): void {
+        const indexContent = this.config.languages
+            .map(lang => `export * as ${lang} from "./${lang}";`)
+            .join('\n');
+        this.writeFile(this.config.files.languageFolder + "index", indexContent);
+    }
 
-    // Generate remote localization file
-    writeFile(CONFIG.files.remoteLocalizationPath, JSON.stringify(remoteNames, null, 4), "json");
+    private async processLanguage(languageId: string): Promise<void> {
+        await this.tg.changeLanguage(languageId);
+        this.languages[languageId] = {};
 
-    console.log("Generated done!");
-});
+        const namespacesWithSpecificKeys = this.config.namespaces.list
+            .filter(ns => this.config.namespaces.shouldFilterKeys(ns));
+        const namespacesWithFullKeys = this.config.namespaces.list
+            .filter(ns => !this.config.namespaces.shouldFilterKeys(ns));
+
+        // Process specific key namespaces
+        namespacesWithSpecificKeys.forEach((ns) => {
+            this.tg.getAllRecords().forEach((record: any) => {
+                this.processNamespaceKeys(record, ns, languageId, true);
+            });
+        });
+
+        // Process full key namespaces
+        namespacesWithFullKeys.forEach((ns) => {
+            this.tg.getAllRecords().forEach((record: any) => {
+                this.processNamespaceKeys(record, ns, languageId, false);
+            });
+        });
+
+        this.generateLanguageFile(languageId);
+    }
+
+    public async generate(): Promise<void> {
+        this.tg.run();
+
+        this.tg.on("initialLoad", async () => {
+            for (const languageId of this.config.languages) {
+                await this.processLanguage(languageId);
+            }
+
+            this.generateIndexFile();
+            this.writeFile(
+                this.config.files.remoteLocalizationPath,
+                JSON.stringify(this.remoteNames, null, 4),
+                "json"
+            );
+
+            console.log("Generation completed successfully!");
+        });
+    }
+}
+
+// Initialize and run the generator
+const generator = new TolgeeGenerator(CONFIG);
+generator.generate();
