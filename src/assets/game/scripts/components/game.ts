@@ -2,17 +2,17 @@ import "./../../../resources/i18n";
 
 import gc from "@sg/game-client-base";
 import { _decorator, Node } from "cc";
+import { BaccaratCardsUI } from "db://direct-shared-components/game-baccarat/cards/baccarat-cards";
 import { AudioContainer } from "db://shared-components/game/audios/scripts/component/audio-container";
 import { ChipFlying } from "db://shared-components/game/chip-flying/scripts/components/chip-flying";
 import GameComponent from "db://shared-components/game/scripts/components/game-component";
 import { WinningResult } from "db://shared-components/shared/common-components/winning-result/scripts/winning-result";
 import { startGame } from "db://shared-components/shared/scripts/startup";
-import { FunctionUtils, isIOS } from "db://shared-components/shared/utils";
+import { FunctionUtils } from "db://shared-components/shared/utils";
 import Observer from "observer";
 
 import { siteConfigs } from "../../../scripts/site-configs";
 import { containerOptions, settings } from "../game-settings";
-import { BaccaratCardsUI } from "db://direct-shared-components/game-baccarat/cards/baccarat-cards";
 
 startGame(settings.name, containerOptions, siteConfigs, settings.namespaces);
 const { Rounds, RoundHistories } = gc;
@@ -36,6 +36,7 @@ export default class Game extends GameComponent {
 
     @property(Node)
     nodeBaccaratCardsUi: Node = null;
+
     baccaratCardsUi: BaccaratCardsUI = null;
 
     protected enableFixHandleFinish = true;
@@ -48,7 +49,7 @@ export default class Game extends GameComponent {
     onLoad() {
         this.audioContainer = this.nodeAudioContainer.getComponent(AudioContainer);
         this.baccaratCardsUi = this.nodeBaccaratCardsUi.getComponent(BaccaratCardsUI);
-        // this.winningResult = this.nodeWinning.getComponent(WinningResult);
+        this.winningResult = this.nodeWinning.getComponent(WinningResult);
         super.onLoad();
     }
 
@@ -76,7 +77,6 @@ export default class Game extends GameComponent {
             this.isAnimatingResult = false;
         }
     }
-
 
     getWinningResult() {
         return this.winningResult.getComponent(WinningResult);
@@ -124,7 +124,6 @@ export default class Game extends GameComponent {
             await this.baccaratCardsUi.draw6Cards(false);
         } else {
             if (firstJoinGameHistory.roundTime <= settings.durations.placingBet + settings.durations.startRound) {
-
                 await this.baccaratCardsUi.draw6Cards(false);
             }
         }
