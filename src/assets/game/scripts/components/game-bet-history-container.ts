@@ -1,12 +1,13 @@
 import gc from "@sg/game-client-base";
-import { Prefab, _decorator } from "cc";
+import { _decorator, Prefab } from "cc";
 import BetHistoryContainer from "db://shared-components/game/bet-history/scripts/components/bet-history-container";
-import { SeDieBetHistoryTable } from "./sedie-bet-history-table";
+
+import { GameBetHistoryTable } from "./game-bet-history-table";
 
 const { ccclass, property } = _decorator;
 
 @ccclass
-export default class SeDieBetHistoryContainer extends BetHistoryContainer {
+export default class GameBetHistoryContainer extends BetHistoryContainer {
     @property(Prefab)
     betPrefab: Prefab = null;
 
@@ -22,7 +23,7 @@ export default class SeDieBetHistoryContainer extends BetHistoryContainer {
         }
 
         if (this.isFirstLoad) {
-            const seDieTable = this.table as SeDieBetHistoryTable;
+            const seDieTable = this.table as GameBetHistoryTable;
             if (seDieTable?.dialog) {
                 seDieTable.dialog.callBackFn = this.createCallBackFn(seDieTable, betHistoryModel);
             }
@@ -34,11 +35,11 @@ export default class SeDieBetHistoryContainer extends BetHistoryContainer {
 
     protected initializeWrapperNode() {
         this.wrapperNode = this.createNode();
-        this.table = this.wrapperNode.getComponent(SeDieBetHistoryTable);
+        this.table = this.wrapperNode.getComponent(GameBetHistoryTable);
         this.isFirstLoad = true;
     }
 
-    protected createCallBackFn(seDieTable: SeDieBetHistoryTable, betHistoryModel: gc.BetHistory.BetHistoryModel) {
+    protected createCallBackFn(seDieTable: GameBetHistoryTable, betHistoryModel: gc.BetHistory.BetHistoryModel) {
         return () => {
             if (!betHistoryModel) {
                 this.scheduleOnce(seDieTable.dialog.callBackFn, this.DURATION_DELAY_RENDER_DATA);
@@ -50,7 +51,7 @@ export default class SeDieBetHistoryContainer extends BetHistoryContainer {
     }
 
     protected renderBetHistory() {
-        (this.table as SeDieBetHistoryTable).showBetHistory({
+        (this.table as GameBetHistoryTable).showBetHistory({
             data: this.currentBetHistoryModel,
             headerPrefab: this.headerPrefab,
             bodyItemPrefab: this.bodyItemPrefab,

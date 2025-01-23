@@ -2,7 +2,8 @@ import gc from "@sg/game-client-base";
 import { _decorator, instantiate, Node, Prefab } from "cc";
 import { BetHistoryTable } from "db://shared-components/game/bet-history/scripts/components/bet-history-table";
 import { Dialog } from "db://shared-components/shared/common-components/dialogs/dialog";
-import { SeDieBetHistoryBodyItem } from "./sedie-bet-history-body-item";
+
+import { GameBetHistoryBodyItem } from "./game-bet-history-body-item";
 
 const { ccclass, property } = _decorator;
 
@@ -15,12 +16,12 @@ type SeDieBetHistoryTableType = {
 };
 
 @ccclass()
-export class SeDieBetHistoryTable extends BetHistoryTable {
+export class GameBetHistoryTable extends BetHistoryTable {
     @property(Dialog)
     dialog: Dialog = null;
 
     getHistoryItemComponent(node: Node) {
-        return node.getComponent(SeDieBetHistoryBodyItem);
+        return node.getComponent(GameBetHistoryBodyItem);
     }
 
     override buildBodyRow(

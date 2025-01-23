@@ -4,7 +4,7 @@ import { _decorator, Color, Component, Label } from "cc";
 const { property, ccclass } = _decorator;
 
 @ccclass
-export default class SeDieBetHistoryBetOption extends Component {
+export default class GameBetHistoryBetOption extends Component {
     @property(Label)
     choice: Label = null;
 
@@ -13,15 +13,15 @@ export default class SeDieBetHistoryBetOption extends Component {
 
     protected convertChoiceData(choice: string): string {
         let betChoice = "";
-        const choiceData = ["even", "odd", "red2", "red3", "red4", "white3", "white4"];
+        const choiceData = ["big", "small", "banker", "bankerPair", "player", "playerPair", "tie"];
         const choiceStr = [
-            "glossary_even",
-            "glossary_odd",
-            "bet_option_red2",
-            "bet_option_red3",
-            "bet_option_red4",
-            "bet_option_white3",
-            "bet_option_white4",
+            "ui.choice_big",
+            "ui.choice_small",
+            "BaccaratX.glossary_banker",
+            "BaccaratX.glossary_banker_pair",
+            "BaccaratX.glossary_player",
+            "BaccaratX.glossary_player_pair",
+            "BaccaratX.glossary_tie",
         ];
         choiceData.forEach((item, index) => {
             if (choice === item) {
@@ -33,7 +33,7 @@ export default class SeDieBetHistoryBetOption extends Component {
 
     handleBetOptionItem(choice: string, odd: string, stake: string) {
         const choiceStr = this.convertChoiceData(choice);
-        this.choice.string = `${gc.Translator.gameTranslate(choiceStr)} @ ${odd}`;
+        this.choice.string = `${gc.Translator.translate(choiceStr)}`;
         this.stake.string = stake;
     }
 
