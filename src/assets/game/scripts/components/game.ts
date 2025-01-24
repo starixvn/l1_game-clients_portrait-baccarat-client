@@ -43,7 +43,6 @@ export default class Game extends GameComponent {
     private audioContainer: AudioContainer = null;
     private winningResult: WinningResult = null;
     private soundWinChoice = ["odd", "even"];
-    private currentFinish: gc.GameServiceMessage.Finish = null;
     private isAnimatingResult = false;
 
     onLoad() {
