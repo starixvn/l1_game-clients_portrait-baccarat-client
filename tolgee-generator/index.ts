@@ -21,7 +21,7 @@ interface TolgeeConfig {
 interface Config {
     files: {
         languageFolder: string;
-        remoteLocalizationPath: string;
+        remoteLocalizationPath?: string;
     };
     languages: string[];
     namespaces: NamespaceConfig;
@@ -34,15 +34,14 @@ interface Config {
 // Configuration constants
 const CONFIG: Config = {
     files: {
-        languageFolder: "./src/assets/resources/i18n/",
-        remoteLocalizationPath: "./src/remote/localization",
+        languageFolder: "./src/assets/resources/i18n/"
+        // remoteLocalizationPath: "./src/remote/localization",
     },
     languages: ["en", "id", "th", "vi", "zh_cn", "zh_tw"],
     namespaces: {
-        list: ["Common", "BaccaratX", "blockchainBaccarat", "ui"],
+        list: ["Common", "BaccaratX", "ui"],
         specificKeys: {
             ui: ["choice_big", "choice_small"],
-            blockchainBaccarat: ["banker_win"],
         },
         shouldFilterKeys: (ns: string) =>
             Object.keys(CONFIG.namespaces.specificKeys).includes(ns),
@@ -190,11 +189,11 @@ win.languages.${languageId} = languages;`;
             }
 
             this.generateIndexFile();
-            this.writeFile(
-                this.config.files.remoteLocalizationPath,
-                JSON.stringify(this.remoteNames, null, 4),
-                "json"
-            );
+            // this.writeFile(
+            //     this.config.files.remoteLocalizationPath,
+            //     JSON.stringify(this.remoteNames, null, 4),
+            //     "json"
+            // );
 
             console.log("Generation completed successfully!");
         });

@@ -14,7 +14,7 @@ import Observer from "observer";
 import { siteConfigs } from "../../../scripts/site-configs";
 import { containerOptions, settings } from "../game-settings";
 
-startGame(settings.name, containerOptions, siteConfigs, settings.namespaces);
+startGame(settings.name, containerOptions, siteConfigs, settings.namespaces.concat(["BaccaratX", "ui"]));
 const { Rounds, RoundHistories } = gc;
 
 const { ccclass, property } = _decorator;
@@ -120,7 +120,6 @@ export default class Game extends GameComponent {
                 this.showResult(result, false, settlementResult);
                 return;
             }
-
             await this.baccaratCardsUi.draw6Cards(false);
         } else {
             if (firstJoinGameHistory.roundTime <= settings.durations.placingBet + settings.durations.startRound) {
