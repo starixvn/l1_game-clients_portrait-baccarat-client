@@ -1,18 +1,18 @@
 {
     "gameNames": {
-        "en": "BaccaratX",
-        "id": "BaccaratX",
-        "th": "บาคาร่าX",
-        "vi": "BaccaratX",
-        "zh_cn": "百家乐X",
-        "zh_tw": "百家乐X"
+        "en": "Baccarat",
+        "id": "Bakarat",
+        "th": "บาคาร่า",
+        "vi": "Cào Baccarat",
+        "zh_cn": "百家乐",
+        "zh_tw": "百家樂"
     },
     "lobbyNames": {
-        "en": "Lucky Baccarat",
-        "id": "Bakarat Beruntung",
-        "th": "บาคาร่านำโชค",
-        "vi": "Lucky Baccarat",
-        "zh_cn": "幸运百家乐",
-        "zh_tw": "幸運百家樂"
+        "en": "Baccarat",
+        "id": "Bakarat",
+        "th": "บาคาร่า",
+        "vi": "Baccarat",
+        "zh_cn": "百家乐",
+        "zh_tw": "百家樂"
     }
 }
