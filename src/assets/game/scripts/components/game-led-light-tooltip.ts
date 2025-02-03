@@ -1,7 +1,7 @@
 import gc from "@sg/game-client-base";
 import { _decorator, Label } from "cc";
 import { LedLightTooltip } from "db://shared-components/game/led-light/scripts/components/led-light-tooltip";
-import { GameBaccaratResultUtil } from "db://direct-shared-components/game-baccarat/utils/game-result-util";
+import { GameBaccaratResultUtil } from "db://baccarat-shared-components/utils/game-result-util";
 
 const { ccclass, property } = _decorator;
 

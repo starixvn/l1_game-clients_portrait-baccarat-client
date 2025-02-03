@@ -9,7 +9,8 @@
             "db://shared-components/*": ["./extensions/shared-components/assets/*"],
             "db://direct-shared-components/*": ["./extensions/direct-shared-components/assets/*"],
             "db://i18n/*": ["./extensions/i18n/assets/*"],
-            "sc-user-service-client/dist/*": ["./node_modules/sc-user-service-client/dist/*"]
+            "sc-user-service-client/dist/*": ["./node_modules/sc-user-service-client/dist/*"],
+            "db://baccarat-shared-components/*": ["./extensions/baccarat-shared-components/assets/*"]
         }
     }
 }

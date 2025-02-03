@@ -2,7 +2,7 @@ import "./../../../resources/i18n";
 
 import gc from "@sg/game-client-base";
 import { _decorator, Node } from "cc";
-import { BaccaratCardsUI } from "db://direct-shared-components/game-baccarat/cards/baccarat-cards";
+import { BaccaratCardsUI } from "db://baccarat-shared-components/cards/baccarat-cards";
 import { AudioContainer } from "db://shared-components/game/audios/scripts/component/audio-container";
 import { ChipFlying } from "db://shared-components/game/chip-flying/scripts/components/chip-flying";
 import GameComponent from "db://shared-components/game/scripts/components/game-component";

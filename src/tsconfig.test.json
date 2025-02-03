@@ -11,7 +11,8 @@
             "cc": ["./tests/cocos-testing/cc"],
             "db://shared-components/*": ["./extensions/shared-components/assets/*"],
             "db://direct-shared-components/*": ["./extensions/direct-shared-components/assets/*"],
-            "db://i18n/*": ["./extensions/i18n/assets/*"]
+            "db://i18n/*": ["./extensions/i18n/assets/*"],
+            "db://baccarat-shared-components/*": ["./extensions/baccarat-shared-components/assets/*"]
         }
     }
 }
