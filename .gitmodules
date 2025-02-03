@@ -1,6 +1,6 @@
 [submodule "src/extensions/shared-components"]
 	path = src/extensions/shared-components
-	url = ../../l1/game-clients/game-client-packages/shared-components.git
+	url = git@git3.nexdev.net:l1/game-clients/game-client-packages/shared-components.git
 	branch = game-client-direct
 
 [submodule "src/extensions/direct-shared-components"]
