@@ -1,5 +1,9 @@
 const win = window as any;
 export const languages = {
+    "ui": {
+        "choice_big": "Tài",
+        "choice_small": "Xỉu"
+    },
     "Common": {
         "Loss": "Thua",
         "back": "Quay Lại",
@@ -269,13 +273,6 @@ export const languages = {
         "title_fairness_guides": "Hướng Dẫn Kiểm Tra Tính Minh Bạch",
         "waiting screen_para_2": "Nhấn vào nút bên dưới nếu bạn muốn tham gia vào quá trình tạo vị trí Cut-card",
         "waiting_screen_para_1": "Tạo Vị Trí Cut-card"
-    },
-    "blockchainBaccarat": {
-        "banker_win": "Nhà Cái Thắng"
-    },
-    "ui": {
-        "choice_big": "Tài",
-        "choice_small": "Xỉu"
     }
 };
 

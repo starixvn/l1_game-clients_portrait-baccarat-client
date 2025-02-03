@@ -1,5 +1,9 @@
 const win = window as any;
 export const languages = {
+    "ui": {
+        "choice_big": "Big",
+        "choice_small": "Small"
+    },
     "Common": {
         "Loss": "Loss",
         "back": "Back",
@@ -269,13 +273,6 @@ export const languages = {
         "title_fairness_guides": "Fairness Guides",
         "waiting screen_para_2": "Click the button below if you would like to contribute to the cut-card index generation",
         "waiting_screen_para_1": "Generating the Cut-card Index"
-    },
-    "blockchainBaccarat": {
-        "banker_win": "Banker Win"
-    },
-    "ui": {
-        "choice_big": "Big",
-        "choice_small": "Small"
     }
 };
 

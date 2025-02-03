@@ -1,5 +1,9 @@
 const win = window as any;
 export const languages = {
+    "ui": {
+        "choice_big": "大",
+        "choice_small": "小"
+    },
     "Common": {
         "Loss": "輸",
         "back": "回",
@@ -269,13 +273,6 @@ export const languages = {
         "title_fairness_guides": "公平指南",
         "waiting screen_para_2": "如果您想為切牌指數產生做出貢獻，請點擊下面的按鈕",
         "waiting_screen_para_1": "產生切牌指數"
-    },
-    "blockchainBaccarat": {
-        "banker_win": "莊家贏！"
-    },
-    "ui": {
-        "choice_big": "大",
-        "choice_small": "小"
     }
 };
 

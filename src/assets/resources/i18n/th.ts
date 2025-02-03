@@ -1,5 +1,9 @@
 const win = window as any;
 export const languages = {
+    "ui": {
+        "choice_big": "ใหญ่",
+        "choice_small": "เล็ก"
+    },
     "Common": {
         "Loss": "เสีย",
         "back": "กลับ",
@@ -269,13 +273,6 @@ export const languages = {
         "title_fairness_guides": "คู่มือความเป็นธรรม",
         "waiting screen_para_2": "คลิกปุ่มด้านล่างหากคุณต้องการมีส่วนร่วมในการตัดไพ่",
         "waiting_screen_para_1": "การสร้างดัชนีตัดไพ่"
-    },
-    "blockchainBaccarat": {
-        "banker_win": "เจ้ามือชนะ!"
-    },
-    "ui": {
-        "choice_big": "ใหญ่",
-        "choice_small": "เล็ก"
     }
 };
 
