@@ -18,3 +18,7 @@
 	path = src/extensions/i18n
 	url = ../game-client-packages/i18n.git
 	branch = main
+[submodule "src/extensions/baccarat-shared-components"]
+	path = src/extensions/baccarat-shared-components
+	url = ../game-client-packages/baccarat-shared-components.git
+	branch = main
