@@ -39,10 +39,8 @@ const CONFIG: Config = {
     },
     languages: ["en", "id", "th", "vi", "zh_cn", "zh_tw"],
     namespaces: {
-        list: ["Common", "BaccaratX", "ui", "Baccarat"],
-        specificKeys: {
-            ui: ["choice_big", "choice_small"],
-        },
+        list: ["Common", "Baccarat"],
+        specificKeys: {},
         shouldFilterKeys: (ns: string) => Object.keys(CONFIG.namespaces.specificKeys).includes(ns),
         getSpecificKeys: (ns: string) => CONFIG.namespaces.specificKeys[ns as keyof typeof CONFIG.namespaces.specificKeys] || [],
     },

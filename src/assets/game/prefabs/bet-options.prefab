@@ -1104,7 +1104,7 @@
     "__prefab": {
       "__id__": 43
     },
-    "key": "ui.choice_big",
+    "key": "Baccarat.glossary_big",
     "format": 1,
     "prefix": "",
     "suffix": "",
@@ -1453,6 +1453,8 @@
       "__id__": 0
     },
     "fileId": "3dTtabaEhDPpmlMyudV/BW",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -2656,7 +2658,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 161.68359375,
+      "width": 446.6484375,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -2692,7 +2694,7 @@
       "b": 255,
       "a": 255
     },
-    "_string": "PLAYER PAIR",
+    "_string": "BACCARAT.GLOSSARY_PLAYER_PAIR",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 24,
@@ -2753,7 +2755,7 @@
     "__prefab": {
       "__id__": 115
     },
-    "key": "BaccaratX.glossary_player_pair",
+    "key": "Baccarat.glossary_player_pair",
     "format": 1,
     "prefix": "",
     "suffix": "",
@@ -3285,6 +3287,8 @@
       "__id__": 0
     },
     "fileId": "5bSh9TxM5HY40VYt7zAMvT",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -4483,7 +4487,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 167.89453125,
+      "width": 452.859375,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -4519,7 +4523,7 @@
       "b": 255,
       "a": 255
     },
-    "_string": "BANKER PAIR",
+    "_string": "BACCARAT.GLOSSARY_BANKER_PAIR",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 24,
@@ -4580,7 +4584,7 @@
     "__prefab": {
       "__id__": 195
     },
-    "key": "BaccaratX.glossary_banker_pair",
+    "key": "Baccarat.glossary_banker_pair",
     "format": 1,
     "prefix": "",
     "suffix": "",
@@ -5112,6 +5116,8 @@
       "__id__": 0
     },
     "fileId": "b6T6ieC+tLr4RJmRtq/g7R",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -6407,7 +6413,7 @@
     "__prefab": {
       "__id__": 275
     },
-    "key": "ui.choice_small",
+    "key": "Baccarat.glossary_small",
     "format": 1,
     "prefix": "",
     "suffix": "",
@@ -6939,6 +6945,8 @@
       "__id__": 0
     },
     "fileId": "59wny7aZxB/IW2nooFBpXt",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -8355,10 +8363,7 @@
       "b": 255,
       "a": 255
     },
-    "_spriteFrame": {
-      "__uuid__": "8953c27a-7d27-48f9-9d1f-27c37878a046@f9941",
-      "__expectedType__": "cc.SpriteFrame"
-    },
+    "_spriteFrame": null,
     "_type": 0,
     "_fillType": 0,
     "_sizeMode": 2,
@@ -8410,6 +8415,8 @@
       "__id__": 0
     },
     "fileId": "b40MOPuedFDbZAxBgPSHDe",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -8700,6 +8707,8 @@
       "__id__": 0
     },
     "fileId": "56qUL1U8ZKfZ2j9hdud08M",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -9933,10 +9942,7 @@
       "b": 255,
       "a": 255
     },
-    "_spriteFrame": {
-      "__uuid__": "473b0bbd-ec76-4e92-8625-5d1d77e6cb8c@f9941",
-      "__expectedType__": "cc.SpriteFrame"
-    },
+    "_spriteFrame": null,
     "_type": 0,
     "_fillType": 0,
     "_sizeMode": 2,
@@ -9988,6 +9994,8 @@
       "__id__": 0
     },
     "fileId": "972xW/gslMB5PPHsOmBkBI",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -10625,6 +10633,8 @@
       "__id__": 0
     },
     "fileId": "2f0PJjhC1FGJjpIM+cSve0",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -12283,10 +12293,7 @@
       "b": 255,
       "a": 255
     },
-    "_spriteFrame": {
-      "__uuid__": "fcce29cf-fba1-4db1-a2ce-dc2a1664a080@f9941",
-      "__expectedType__": "cc.SpriteFrame"
-    },
+    "_spriteFrame": null,
     "_type": 0,
     "_fillType": 0,
     "_sizeMode": 2,
@@ -12338,6 +12345,8 @@
       "__id__": 0
     },
     "fileId": "38q1/pvVxE4rAFnjeemynm",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -12628,6 +12637,8 @@
       "__id__": 0
     },
     "fileId": "1384H5XqVNvZxyHw2tuR+H",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
