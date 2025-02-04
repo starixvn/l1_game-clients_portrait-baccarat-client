@@ -20,6 +20,10 @@ export class BaccaratScoreBoard extends Component {
         zoomInDerivedRoad: "zoomInDerivedRoad",
     };
 
+    protected start(): void {
+        this.zoom(undefined, this.zoomModes.normal);
+    }
+
     onClickExpandMode() {
         this.isExpandBeadRoad = !this.isExpandBeadRoad;
         if (this.isExpandBeadRoad) {
