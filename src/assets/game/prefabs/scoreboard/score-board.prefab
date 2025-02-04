@@ -9827,7 +9827,7 @@
         "__id__": 517
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 525
@@ -10784,7 +10784,7 @@
     "__type__": "GridItemSettings",
     "size": 33,
     "prefab": {
-      "__uuid__": "4dbde2a2-804c-493b-86bf-36be09b77f1b",
+      "__uuid__": "91765d41-eb29-469f-97b6-c27387795b5b",
       "__expectedType__": "cc.Prefab"
     }
   },
@@ -10797,7 +10797,7 @@
     "column": 21,
     "itemSize": 33,
     "itemPrefab": {
-      "__uuid__": "4dbde2a2-804c-493b-86bf-36be09b77f1b",
+      "__uuid__": "91765d41-eb29-469f-97b6-c27387795b5b",
       "__expectedType__": "cc.Prefab"
     }
   },
@@ -11163,7 +11163,7 @@
         "__id__": 529
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 720
