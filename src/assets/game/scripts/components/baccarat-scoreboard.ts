@@ -14,6 +14,11 @@ export class BaccaratScoreBoard extends Component {
     nodeContainer: Node = null;
 
     private isExpandBeadRoad = false;
+    private readonly zoomModes = {
+        normal: "normal",
+        zoomInBigRoad: "zoomInBigRoad",
+        zoomInDerivedRoad: "zoomInDerivedRoad",
+    };
 
     onClickExpandMode() {
         this.isExpandBeadRoad = !this.isExpandBeadRoad;
@@ -25,5 +30,30 @@ export class BaccaratScoreBoard extends Component {
             this.nodeWrapperVertical.getComponent(UITransform).width = 704;
         }
         this.nodeContainer.getComponent(Layout).updateLayout();
+    }
+
+    zoom(event: any, mode: string) {
+        switch (mode) {
+            case this.zoomModes.normal:
+                this.nodeWrapperVertical.getChildByName(this.zoomModes.normal).active = true;
+                this.nodeWrapperVertical.getChildByName(this.zoomModes.zoomInBigRoad).active = false;
+                this.nodeWrapperVertical.getChildByName(this.zoomModes.zoomInDerivedRoad).active = false;
+                //this.runActionZoom(this.node.getChildByName(this.zoomModes.normal));
+                break;
+
+            case this.zoomModes.zoomInBigRoad:
+                this.nodeWrapperVertical.getChildByName(this.zoomModes.normal).active = false;
+                this.nodeWrapperVertical.getChildByName(this.zoomModes.zoomInBigRoad).active = true;
+                this.nodeWrapperVertical.getChildByName(this.zoomModes.zoomInDerivedRoad).active = false;
+                //this.runActionZoom(this.node.getChildByName(this.zoomModes.zoomInBigRoad));
+                break;
+
+            case this.zoomModes.zoomInDerivedRoad:
+                this.nodeWrapperVertical.getChildByName(this.zoomModes.normal).active = false;
+                this.nodeWrapperVertical.getChildByName(this.zoomModes.zoomInBigRoad).active = false;
+                this.nodeWrapperVertical.getChildByName(this.zoomModes.zoomInDerivedRoad).active = true;
+                //this.runActionZoom(this.node.getChildByName(this.zoomModes.zoomInDerivedScoreboards));
+                break;
+        }
     }
 }
