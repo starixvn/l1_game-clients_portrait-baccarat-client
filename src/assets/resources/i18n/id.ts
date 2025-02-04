@@ -273,6 +273,12 @@ export const languages = {
         "title_fairness_guides": "Panduan Keadilan",
         "waiting screen_para_2": "Klik tombol di bawah jika Anda ingin berkontribusi pada pembuatan indeks Cut-card",
         "waiting_screen_para_1": "Menghasilkan Indeks Cut-card"
+    },
+    "Baccarat": {
+        "game_icon_name": "Bakarat",
+        "game_name": "Bakarat",
+        "glossary_big": "Besar",
+        "glossary_small": "Kecil"
     }
 };
 

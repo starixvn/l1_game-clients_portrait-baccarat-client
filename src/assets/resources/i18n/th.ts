@@ -273,6 +273,12 @@ export const languages = {
         "title_fairness_guides": "คู่มือความเป็นธรรม",
         "waiting screen_para_2": "คลิกปุ่มด้านล่างหากคุณต้องการมีส่วนร่วมในการตัดไพ่",
         "waiting_screen_para_1": "การสร้างดัชนีตัดไพ่"
+    },
+    "Baccarat": {
+        "game_icon_name": "บาคาร่า",
+        "game_name": "บาคาร่า",
+        "glossary_big": "ใหญ่",
+        "glossary_small": "เล็ก"
     }
 };
 

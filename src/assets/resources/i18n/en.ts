@@ -273,6 +273,12 @@ export const languages = {
         "title_fairness_guides": "Fairness Guides",
         "waiting screen_para_2": "Click the button below if you would like to contribute to the cut-card index generation",
         "waiting_screen_para_1": "Generating the Cut-card Index"
+    },
+    "Baccarat": {
+        "game_icon_name": "Baccarat",
+        "game_name": "Baccarat",
+        "glossary_big": "Big",
+        "glossary_small": "Small"
     }
 };
 

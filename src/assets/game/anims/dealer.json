@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "+SSXPYkCL+QeapbrY1EmUbp8U9k", "spine": "3.8.99", "x": -87.75, "y": -115.58, "width": 173.25, "height": 231.24 },
+"skeleton": { "hash": "omTaUvhGkduC4BSgZ1HG0z1Zisw", "spine": "3.8.99", "x": -87.75, "y": -115.58, "width": 173.25, "height": 231.24 },
 "bones": [
 	{ "name": "root", "scaleX": 0.75, "scaleY": 0.75 },
 	{ "name": "ghe", "parent": "root" },
@@ -28,7 +28,7 @@
 		"scaleY": 0.75,
 		"transform": "noScale"
 	},
-	{ "name": "arm-R", "parent": "body4", "length": 103.53, "rotation": 63.08, "x": 52.62, "y": 1.08 },
+	{ "name": "arm-R", "parent": "body4", "length": 103.53, "rotation": 68.62, "x": 52.62, "y": 1.08 },
 	{ "name": "hand-R", "parent": "arm-R", "length": 66.32, "rotation": 92.36, "x": 109.19, "y": 0.15 },
 	{
 		"name": "character2",

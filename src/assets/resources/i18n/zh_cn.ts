@@ -273,6 +273,12 @@ export const languages = {
         "title_fairness_guides": "公平指南",
         "waiting screen_para_2": "如果您想为切牌指数产生做出贡献，请点击下面的按钮",
         "waiting_screen_para_1": "产生切牌指数"
+    },
+    "Baccarat": {
+        "game_icon_name": "百家乐",
+        "game_name": "百家乐",
+        "glossary_big": "大",
+        "glossary_small": "小"
     }
 };
 

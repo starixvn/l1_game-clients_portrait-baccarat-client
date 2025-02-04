@@ -14,7 +14,7 @@ import Observer from "observer";
 import { siteConfigs } from "../../../scripts/site-configs";
 import { containerOptions, settings } from "../game-settings";
 
-startGame(settings.name, containerOptions, siteConfigs, settings.namespaces.concat(["BaccaratX", "ui"]));
+startGame(settings.name, containerOptions, siteConfigs, settings.namespaces.concat(["BaccaratX", "Baccarat", "ui"]));
 const { Rounds, RoundHistories } = gc;
 
 const { ccclass, property } = _decorator;

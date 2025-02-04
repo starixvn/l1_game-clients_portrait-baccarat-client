@@ -34,23 +34,21 @@ interface Config {
 // Configuration constants
 const CONFIG: Config = {
     files: {
-        languageFolder: "./src/assets/resources/i18n/"
+        languageFolder: "./src/assets/resources/i18n/",
         // remoteLocalizationPath: "./src/remote/localization",
     },
     languages: ["en", "id", "th", "vi", "zh_cn", "zh_tw"],
     namespaces: {
-        list: ["Common", "BaccaratX", "ui"],
+        list: ["Common", "BaccaratX", "ui", "Baccarat"],
         specificKeys: {
             ui: ["choice_big", "choice_small"],
         },
-        shouldFilterKeys: (ns: string) =>
-            Object.keys(CONFIG.namespaces.specificKeys).includes(ns),
-        getSpecificKeys: (ns: string) =>
-            CONFIG.namespaces.specificKeys[ns as keyof typeof CONFIG.namespaces.specificKeys] || []
+        shouldFilterKeys: (ns: string) => Object.keys(CONFIG.namespaces.specificKeys).includes(ns),
+        getSpecificKeys: (ns: string) => CONFIG.namespaces.specificKeys[ns as keyof typeof CONFIG.namespaces.specificKeys] || [],
     },
     remoteKeys: {
         game_name: "gameNames",
-        game_icon_name: "lobbyNames"
+        game_icon_name: "lobbyNames",
     },
     tolgeeConfig: {
         defaultLanguage: "en",
@@ -58,7 +56,7 @@ const CONFIG: Config = {
         apiUrl: "https://tolgee.sabagame.com/",
         projectId: "5",
         defaultNs: "messages",
-    }
+    },
 };
 
 class TolgeeGenerator {
@@ -88,17 +86,11 @@ class TolgeeGenerator {
     }
 
     private initializeRemoteNames(): void {
-        this.remoteNames = Object.fromEntries(
-            Object.values(this.config.remoteKeys).map(key => [key, {}])
-        );
+        this.remoteNames = Object.fromEntries(Object.values(this.config.remoteKeys).map((key) => [key, {}]));
     }
 
     private writeFile(fileName: string, content: string, extension = "ts"): void {
-        fs.writeFileSync(
-            `${fileName}.${extension}`,
-            content,
-            { encoding: "utf8", flag: "w" }
-        );
+        fs.writeFileSync(`${fileName}.${extension}`, content, { encoding: "utf8", flag: "w" });
     }
 
     private processRemoteKeys(key: string, value: string, languageId: string): void {
@@ -109,18 +101,12 @@ class TolgeeGenerator {
         });
     }
 
-    private processNamespaceKeys(
-        record: any,
-        ns: string,
-        languageId: string,
-        filterKeys = false
-    ): void {
+    private processNamespaceKeys(record: any, ns: string, languageId: string, filterKeys = false): void {
         if (record.namespace === ns) {
             this.languages[languageId][ns] = {};
 
             record.data.forEach((value: string, key: string) => {
-                const shouldIncludeKey = !filterKeys ||
-                    (filterKeys && this.config.namespaces.getSpecificKeys(ns).includes(key));
+                const shouldIncludeKey = !filterKeys || (filterKeys && this.config.namespaces.getSpecificKeys(ns).includes(key));
 
                 if (shouldIncludeKey) {
                     this.languages[languageId][ns][key] = value;
@@ -148,9 +134,7 @@ win.languages.${languageId} = languages;`;
     }
 
     private generateIndexFile(): void {
-        const indexContent = this.config.languages
-            .map(lang => `export * as ${lang} from "./${lang}";`)
-            .join('\n');
+        const indexContent = this.config.languages.map((lang) => `export * as ${lang} from "./${lang}";`).join("\n");
         this.writeFile(this.config.files.languageFolder + "index", indexContent);
     }
 
@@ -158,10 +142,8 @@ win.languages.${languageId} = languages;`;
         await this.tg.changeLanguage(languageId);
         this.languages[languageId] = {};
 
-        const namespacesWithSpecificKeys = this.config.namespaces.list
-            .filter(ns => this.config.namespaces.shouldFilterKeys(ns));
-        const namespacesWithFullKeys = this.config.namespaces.list
-            .filter(ns => !this.config.namespaces.shouldFilterKeys(ns));
+        const namespacesWithSpecificKeys = this.config.namespaces.list.filter((ns) => this.config.namespaces.shouldFilterKeys(ns));
+        const namespacesWithFullKeys = this.config.namespaces.list.filter((ns) => !this.config.namespaces.shouldFilterKeys(ns));
 
         // Process specific key namespaces
         namespacesWithSpecificKeys.forEach((ns) => {
