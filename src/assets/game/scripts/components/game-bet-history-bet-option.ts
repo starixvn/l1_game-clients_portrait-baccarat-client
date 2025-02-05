@@ -15,13 +15,13 @@ export default class GameBetHistoryBetOption extends Component {
         let betChoice = "";
         const choiceData = ["big", "small", "banker", "bankerPair", "player", "playerPair", "tie"];
         const choiceStr = [
-            "ui.choice_big",
-            "ui.choice_small",
-            "BaccaratX.glossary_banker",
-            "BaccaratX.glossary_banker_pair",
-            "BaccaratX.glossary_player",
-            "BaccaratX.glossary_player_pair",
-            "BaccaratX.glossary_tie",
+            "Baccarat.glossary_big",
+            "Baccarat.glossary_small",
+            "Baccarat.glossary_banker",
+            "Baccarat.glossary_banker_pair",
+            "Baccarat.glossary_player",
+            "Baccarat.glossary_player_pair",
+            "Baccarat.glossary_tie",
         ];
         choiceData.forEach((item, index) => {
             if (choice === item) {
