@@ -1,4 +1,4 @@
-import { _decorator, Component, Layout, Node, UITransform } from "cc";
+import { _decorator, Component, Layout, Node, Sprite, SpriteAtlas, UITransform } from "cc";
 import { GridLayout } from "db://shared-components/shared/common-components/grid-layout/scripts/components/grid-layout";
 
 const { ccclass, property } = _decorator;
@@ -13,6 +13,9 @@ export class BaccaratScoreBoard extends Component {
 
     @property(Node)
     nodeContainer: Node = null;
+
+    @property(SpriteAtlas)
+    mainAtlas: SpriteAtlas = null;
 
     private isExpandBeadRoad = false;
     private readonly zoomModes = {
@@ -32,16 +35,20 @@ export class BaccaratScoreBoard extends Component {
 
     onClickExpandMode() {
         this.isExpandBeadRoad = !this.isExpandBeadRoad;
-        const layoutBeadRoad = this.nodeBeadRoad.getChildByName("baccarat-bead-road").getComponent(GridLayout);
+        const beadRoad = this.nodeBeadRoad.getChildByName("baccarat-bead-road");
+        const layoutBeadRoad = beadRoad.getComponent(GridLayout);
+        const changeModeSpr = beadRoad.getChildByName("btnChangeMode").getComponent(Sprite);
         if (this.isExpandBeadRoad) {
             this.nodeBeadRoad.getComponent(UITransform).width = this.WIDTH_EXPAND_BEADROAD;
             this.nodeWrapperVertical.getComponent(UITransform).width = this.WIDTH_GAME - this.WIDTH_SPACING - this.WIDTH_EXPAND_BEADROAD;
             layoutBeadRoad.settings.scrollable = true;
             layoutBeadRoad.settings.scrollToEnd = true;
+            changeModeSpr.spriteFrame = this.mainAtlas.getSpriteFrame("stats-icon-zoom-out");
         } else {
             this.nodeBeadRoad.getComponent(UITransform).width = this.WIDTH_COLLAPSE_BEADROAD;
             this.nodeWrapperVertical.getComponent(UITransform).width = this.WIDTH_GAME - this.WIDTH_SPACING - this.WIDTH_COLLAPSE_BEADROAD;
             layoutBeadRoad.settings.scrollable = false;
+            changeModeSpr.spriteFrame = this.mainAtlas.getSpriteFrame("stats-icon-zoom");
         }
         this.nodeContainer.getComponent(Layout).updateLayout();
     }
