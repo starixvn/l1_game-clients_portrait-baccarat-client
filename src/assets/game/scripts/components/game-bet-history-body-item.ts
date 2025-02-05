@@ -27,10 +27,12 @@ export class GameBetHistoryBodyItem extends BetHistoryNewBodyItem {
     @property(Node)
     betOption: Node = null;
 
+    @property(Prefab)
+    betsPrefab: Prefab = null;
+
     setData(data: SeDieBetHistoryBodyItemType) {
         super.setData(data);
-        const { betsPrefab } = data;
-        const { time, settlementResult, freeBet, odds, betwin } = data.betHistoryLog;
+        const { time, settlementResult, freeBet, odds } = data.betHistoryLog;
         if (time) {
             const date = DateTimeUtils.getStringDate(time);
             const hour = DateTimeUtils.getStringHourByTime(time);
@@ -40,7 +42,7 @@ export class GameBetHistoryBodyItem extends BetHistoryNewBodyItem {
 
         if (settlementResult) {
             Object.keys(settlementResult).forEach((choice) => {
-                const node = instantiate(betsPrefab);
+                const node = instantiate(this.betsPrefab);
                 const option = node.getComponent(GameBetHistoryBetOption);
                 let stake = data.betHistoryLog[choice];
                 if (+stake > 0) {
