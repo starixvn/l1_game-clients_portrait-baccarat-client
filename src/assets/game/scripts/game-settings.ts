@@ -9,10 +9,10 @@ export const settings = {
     namespaces: ["Baccarat"],
     durations: {
         wholeRound: 45,
-        lockingBet: 5,
+        lockingBet: 3,
         placingBet: 30,
-        generatingResult: 1,
-        showingResult: 6,
+        generatingResult: 7,
+        showingResult: 5,
         startRound: 2,
     },
     numberOfRoundHistory: 100,
