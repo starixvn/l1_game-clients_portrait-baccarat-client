@@ -33,7 +33,7 @@ export default class GameBetHistoryBetOption extends Component {
 
     handleBetOptionItem(choice: string, odd: string, stake: string) {
         const choiceStr = this.convertChoiceData(choice);
-        this.choice.string = `${gc.Translator.translate(choiceStr)}`;
+        this.choice.string = `${gc.Translator.translate(choiceStr)} @ ${odd}`;
         this.stake.string = stake;
     }
 

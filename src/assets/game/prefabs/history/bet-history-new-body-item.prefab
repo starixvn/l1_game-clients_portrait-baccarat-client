@@ -274,7 +274,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 135.67200000000003,
+      "x": 110.162,
       "y": 0,
       "z": 0
     },
@@ -304,7 +304,7 @@
   {
     "__type__": "cc.Node",
     "_name": "node",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
       "__id__": 1
@@ -373,7 +373,7 @@
   {
     "__type__": "cc.Node",
     "_name": "time",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
       "__id__": 12
@@ -897,7 +897,7 @@
   {
     "__type__": "cc.Node",
     "_name": "round",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
       "__id__": 12
@@ -921,7 +921,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -189.183,
+      "x": -191.048,
       "y": 0,
       "z": 0
     },
@@ -951,7 +951,7 @@
   {
     "__type__": "cc.Node",
     "_name": "lblRound",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
       "__id__": 37
@@ -1216,7 +1216,7 @@
   {
     "__type__": "cc.Node",
     "_name": "result",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
       "__id__": 12
@@ -1239,7 +1239,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -67.06300000000005,
+      "x": -81.833,
       "y": 0,
       "z": 0
     },
@@ -1367,7 +1367,7 @@
   {
     "__type__": "cc.Node",
     "_name": "lblWin",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
       "__id__": 12
@@ -1393,7 +1393,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 297.118,
+      "x": 303.716,
       "y": 0,
       "z": 0
     },
@@ -1572,7 +1572,7 @@
   {
     "__type__": "cc.Node",
     "_name": "winloss",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
       "__id__": 12
@@ -2059,7 +2059,6 @@
       "__id__": 0
     },
     "fileId": "e6nH9Gu0ZLIr3BacMZxKW/",
-    "instance": null,
     "targetOverrides": null
   }
 ]
