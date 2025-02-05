@@ -778,7 +778,7 @@
     },
     "spriteList": [],
     "atlas": {
-      "__uuid__": "a9aeec1d-6f8b-4f56-a89d-3f29f8c16112",
+      "__uuid__": "8dc478c1-8ea3-4618-80ee-95750b3fcbe5",
       "__expectedType__": "cc.SpriteAtlas"
     },
     "prefix": "br_red_circle_filled",
@@ -1141,7 +1141,7 @@
     },
     "spriteList": [],
     "atlas": {
-      "__uuid__": "a9aeec1d-6f8b-4f56-a89d-3f29f8c16112",
+      "__uuid__": "8dc478c1-8ea3-4618-80ee-95750b3fcbe5",
       "__expectedType__": "cc.SpriteAtlas"
     },
     "prefix": "br_blue_circle_filled",
@@ -1504,7 +1504,7 @@
     },
     "spriteList": [],
     "atlas": {
-      "__uuid__": "a9aeec1d-6f8b-4f56-a89d-3f29f8c16112",
+      "__uuid__": "8dc478c1-8ea3-4618-80ee-95750b3fcbe5",
       "__expectedType__": "cc.SpriteAtlas"
     },
     "prefix": "br_green_circle_filled",
@@ -1766,8 +1766,8 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -8.90100000000001,
-      "y": 8.758000000000038,
+      "x": -9.988999999999976,
+      "y": 8.623000000000047,
       "z": 0
     },
     "_lrot": {
@@ -1807,8 +1807,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 18,
-      "height": 18
+      "width": 15,
+      "height": 15
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1972,8 +1972,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 18,
-      "height": 18
+      "width": 15,
+      "height": 15
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -3247,8 +3247,8 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -8.666999999999973,
-      "y": 9.001999999999953,
+      "x": -8.872000000000014,
+      "y": 9.678999999999974,
       "z": 0
     },
     "_lrot": {
@@ -3288,8 +3288,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 18,
-      "height": 18
+      "width": 15,
+      "height": 15
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -3412,8 +3412,8 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 9.982000000000028,
-      "y": -8.144000000000005,
+      "x": 10.588999999999999,
+      "y": -8.686000000000035,
       "z": 0
     },
     "_lrot": {
@@ -3453,8 +3453,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 18,
-      "height": 18
+      "width": 15,
+      "height": 15
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
