@@ -97,7 +97,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 4.125,
+      "y": 6.5625,
       "z": 0
     },
     "_lrot": {
@@ -234,8 +234,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 0.5,
-      "y": 0.5,
+      "x": 0.25,
+      "y": 0.25,
       "z": 1
     },
     "_mobility": 0,
@@ -262,8 +262,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 96.66796875,
-      "height": 37.8
+      "width": 193.3359375,
+      "height": 60.480000000000004
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -301,10 +301,10 @@
     "_string": "PLAYER",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 24,
-    "_fontSize": 24,
+    "_actualFontSize": 48,
+    "_fontSize": 48,
     "_fontFamily": "Arial",
-    "_lineHeight": 30,
+    "_lineHeight": 48,
     "_overflow": 0,
     "_enableWrapText": true,
     "_font": {
@@ -359,7 +359,7 @@
     "__prefab": {
       "__id__": 10
     },
-    "key": "BaccaratX.glossary_player",
+    "key": "Baccarat.glossary_player",
     "format": 1,
     "prefix": "",
     "suffix": "",
@@ -438,8 +438,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 0.5,
-      "y": 0.5,
+      "x": 0.25,
+      "y": 0.25,
       "z": 1
     },
     "_mobility": 0,
@@ -466,7 +466,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 13.41796875,
+      "width": 26.8359375,
       "height": 37.8
     },
     "_anchorPoint": {
@@ -505,8 +505,8 @@
     "_string": "3",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 24,
-    "_fontSize": 24,
+    "_actualFontSize": 48,
+    "_fontSize": 48,
     "_fontFamily": "Arial",
     "_lineHeight": 30,
     "_overflow": 0,
@@ -606,8 +606,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 0.5,
-      "y": 0.5,
+      "x": 0.25,
+      "y": 0.25,
       "z": 1
     },
     "_mobility": 0,
@@ -634,8 +634,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 102.87890625,
-      "height": 37.8
+      "width": 205.7578125,
+      "height": 60.480000000000004
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -673,10 +673,10 @@
     "_string": "BANKER",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 24,
-    "_fontSize": 24,
+    "_actualFontSize": 48,
+    "_fontSize": 48,
     "_fontFamily": "Arial",
-    "_lineHeight": 30,
+    "_lineHeight": 48,
     "_overflow": 0,
     "_enableWrapText": true,
     "_font": {
@@ -731,7 +731,7 @@
     "__prefab": {
       "__id__": 26
     },
-    "key": "BaccaratX.glossary_banker",
+    "key": "Baccarat.glossary_banker",
     "format": 1,
     "prefix": "",
     "suffix": "",
@@ -810,8 +810,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 0.5,
-      "y": 0.5,
+      "x": 0.25,
+      "y": 0.25,
       "z": 1
     },
     "_mobility": 0,
@@ -838,7 +838,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 13.41796875,
+      "width": 26.8359375,
       "height": 37.8
     },
     "_anchorPoint": {
@@ -877,8 +877,8 @@
     "_string": "3",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 24,
-    "_fontSize": 24,
+    "_actualFontSize": 48,
+    "_fontSize": 48,
     "_fontFamily": "Arial",
     "_lineHeight": 30,
     "_overflow": 0,
@@ -951,7 +951,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 149.19140625,
-      "height": 50.25
+      "height": 55.125
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1023,8 +1023,8 @@
     },
     "_alignFlags": 45,
     "_target": null,
-    "_left": -2.8037109375,
-    "_right": -2.8037109375,
+    "_left": 0,
+    "_right": 0,
     "_top": 0,
     "_bottom": 0,
     "_horizontalCenter": 0,
@@ -1110,8 +1110,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 146.724609375,
-      "height": 50.25
+      "width": 169.27099609375,
+      "height": 55.125
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1150,7 +1150,7 @@
       "__uuid__": "24745b64-2582-48cd-9b77-8b0029b06bcf@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
-    "_type": 1,
+    "_type": 0,
     "_fillType": 0,
     "_sizeMode": 0,
     "_fillCenter": {
@@ -1244,7 +1244,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 17.100000000000023,
+      "y": 21.56899999999996,
       "z": 0
     },
     "_lrot": {
@@ -1256,8 +1256,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 0.5,
-      "y": 0.5,
+      "x": 0.25,
+      "y": 0.25,
       "z": 1
     },
     "_mobility": 0,
@@ -1284,7 +1284,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 93.92578125,
+      "width": 187.8515625,
       "height": 37.8
     },
     "_anchorPoint": {
@@ -1323,8 +1323,8 @@
     "_string": "#123456",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 24,
-    "_fontSize": 24,
+    "_actualFontSize": 48,
+    "_fontSize": 48,
     "_fontFamily": "Arial",
     "_lineHeight": 30,
     "_overflow": 0,
