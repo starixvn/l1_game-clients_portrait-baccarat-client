@@ -11400,7 +11400,7 @@
         "__id__": 545
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 736
@@ -13713,7 +13713,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 1,
-      "height": 66
+      "height": 96
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
