@@ -1,4 +1,5 @@
 import { _decorator, Component, Layout, Node, UITransform } from "cc";
+import { GridLayout } from "db://shared-components/shared/common-components/grid-layout/scripts/components/grid-layout";
 
 const { ccclass, property } = _decorator;
 
@@ -26,12 +27,16 @@ export class BaccaratScoreBoard extends Component {
 
     onClickExpandMode() {
         this.isExpandBeadRoad = !this.isExpandBeadRoad;
+        const layoutBeadRoad = this.nodeBeadRoad.getChildByName("baccarat-bead-road").getComponent(GridLayout);
         if (this.isExpandBeadRoad) {
             this.nodeBeadRoad.getComponent(UITransform).width = 528;
             this.nodeWrapperVertical.getComponent(UITransform).width = 278;
+            layoutBeadRoad.settings.scrollable = true;
+            layoutBeadRoad.settings.scrollToEnd = true;
         } else {
-            this.nodeBeadRoad.getComponent(UITransform).width = 102;
-            this.nodeWrapperVertical.getComponent(UITransform).width = 704;
+            this.nodeBeadRoad.getComponent(UITransform).width = 100;
+            this.nodeWrapperVertical.getComponent(UITransform).width = 706;
+            layoutBeadRoad.settings.scrollable = false;
         }
         this.nodeContainer.getComponent(Layout).updateLayout();
     }
