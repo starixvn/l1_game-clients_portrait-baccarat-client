@@ -16,6 +16,9 @@ export class BaccaratScoreBoard extends Component {
     @property(SpriteAtlas)
     mainAtlas: SpriteAtlas = null;
 
+    @property(Sprite)
+    sprChangeModeBeadRoad: Sprite = null;
+
     private tweenBeadRoad: Tween<UITransform> = null;
 
     private isExpandBeadRoad = false;
@@ -36,16 +39,14 @@ export class BaccaratScoreBoard extends Component {
 
     onClickExpandMode() {
         this.isExpandBeadRoad = !this.isExpandBeadRoad;
-        const beadRoad = this.nodeBeadRoad.getChildByName("baccarat-bead-road");
-        const changeModeSpr = beadRoad.getChildByName("btnChangeMode").getComponent(Sprite);
         if (this.isExpandBeadRoad) {
             this.nodeBeadRoad.getComponent(UITransform).width = this.WIDTH_EXPAND_BEADROAD;
             this.nodeWrapperVertical.getComponent(UITransform).width = this.WIDTH_GAME - this.WIDTH_SPACING - this.WIDTH_EXPAND_BEADROAD;
-            changeModeSpr.spriteFrame = this.mainAtlas.getSpriteFrame("stats-icon-zoom-out");
+            this.sprChangeModeBeadRoad.spriteFrame = this.mainAtlas.getSpriteFrame("stats-icon-zoom-out");
         } else {
             this.nodeBeadRoad.getComponent(UITransform).width = this.WIDTH_COLLAPSE_BEADROAD;
             this.nodeWrapperVertical.getComponent(UITransform).width = this.WIDTH_GAME - this.WIDTH_SPACING - this.WIDTH_COLLAPSE_BEADROAD;
-            changeModeSpr.spriteFrame = this.mainAtlas.getSpriteFrame("stats-icon-zoom");
+            this.sprChangeModeBeadRoad.spriteFrame = this.mainAtlas.getSpriteFrame("stats-icon-zoom");
         }
         this.nodeContainer.getComponent(Layout).updateLayout();
     }
