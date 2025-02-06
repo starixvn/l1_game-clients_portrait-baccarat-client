@@ -35,7 +35,7 @@ interface Config {
 const CONFIG: Config = {
     files: {
         languageFolder: "./src/assets/resources/i18n/",
-        // remoteLocalizationPath: "./src/remote/localization",
+        remoteLocalizationPath: "./src/remote/localization",
     },
     languages: ["en", "id", "th", "vi", "zh_cn", "zh_tw"],
     namespaces: {
@@ -169,11 +169,11 @@ win.languages.${languageId} = languages;`;
             }
 
             this.generateIndexFile();
-            // this.writeFile(
-            //     this.config.files.remoteLocalizationPath,
-            //     JSON.stringify(this.remoteNames, null, 4),
-            //     "json"
-            // );
+            this.writeFile(
+                this.config.files.remoteLocalizationPath || "./src/remote/localization.json",
+                JSON.stringify(this.remoteNames, null, 4),
+                "json"
+            );
 
             console.log("Generation completed successfully!");
         });
