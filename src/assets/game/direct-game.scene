@@ -6046,7 +6046,9 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "iconContainer": null,
+    "iconContainer": {
+      "__id__": 344
+    },
     "_id": "91S/iFOQtKNa08Ut3b06eO"
   },
   {
