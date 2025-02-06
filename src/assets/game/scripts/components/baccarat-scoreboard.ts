@@ -57,21 +57,18 @@ export class BaccaratScoreBoard extends Component {
                 this.nodeWrapperVertical.getChildByName(this.zoomModes.normal).active = true;
                 this.nodeWrapperVertical.getChildByName(this.zoomModes.zoomInBigRoad).active = false;
                 this.nodeWrapperVertical.getChildByName(this.zoomModes.zoomInDerivedRoad).active = false;
-                //this.runActionZoom(this.node.getChildByName(this.zoomModes.normal));
                 break;
 
             case this.zoomModes.zoomInBigRoad:
                 this.nodeWrapperVertical.getChildByName(this.zoomModes.normal).active = false;
                 this.nodeWrapperVertical.getChildByName(this.zoomModes.zoomInBigRoad).active = true;
                 this.nodeWrapperVertical.getChildByName(this.zoomModes.zoomInDerivedRoad).active = false;
-                //this.runActionZoom(this.node.getChildByName(this.zoomModes.zoomInBigRoad));
                 break;
 
             case this.zoomModes.zoomInDerivedRoad:
                 this.nodeWrapperVertical.getChildByName(this.zoomModes.normal).active = false;
                 this.nodeWrapperVertical.getChildByName(this.zoomModes.zoomInBigRoad).active = false;
                 this.nodeWrapperVertical.getChildByName(this.zoomModes.zoomInDerivedRoad).active = true;
-                //this.runActionZoom(this.node.getChildByName(this.zoomModes.zoomInDerivedScoreboards));
                 break;
         }
     }
