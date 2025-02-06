@@ -206,11 +206,13 @@ export const languages = {
         "glossary_banker": "Banker",
         "glossary_banker_pair": "Banker pair",
         "glossary_big": "Besar",
-        "glossary_player": "Pemain",
+        "glossary_player": "Player",
         "glossary_player_pair": "Player Pair",
         "glossary_small": "Kecil",
         "glossary_tie": "Seri",
         "player_win": "PLAYER MENANG",
+        "short_banker": "B",
+        "short_player": "P",
         "tie_win": "SERI"
     }
 };

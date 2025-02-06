@@ -211,6 +211,8 @@ export const languages = {
         "glossary_small": "小",
         "glossary_tie": "平局",
         "player_win": "闲家获胜",
+        "short_banker": "庄",
+        "short_player": "闲",
         "tie_win": "和"
     }
 };

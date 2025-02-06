@@ -211,6 +211,8 @@ export const languages = {
         "glossary_small": "Xỉu",
         "glossary_tie": "Hòa",
         "player_win": "NHÀ CON THẮNG",
+        "short_banker": "B",
+        "short_player": "P",
         "tie_win": "HÒA"
     }
 };

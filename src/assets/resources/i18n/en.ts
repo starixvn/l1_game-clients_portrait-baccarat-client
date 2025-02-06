@@ -211,6 +211,8 @@ export const languages = {
         "glossary_small": "Small",
         "glossary_tie": "Tie",
         "player_win": "PLAYER WIN",
+        "short_banker": "B",
+        "short_player": "P",
         "tie_win": "TIE"
     }
 };
