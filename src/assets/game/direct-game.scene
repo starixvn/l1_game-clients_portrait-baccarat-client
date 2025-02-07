@@ -5306,8 +5306,8 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "widget": {
-      "__id__": 290
+    "gameNode": {
+      "__id__": 40
     },
     "value": 0.1,
     "_policy": 0,

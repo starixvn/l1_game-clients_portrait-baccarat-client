@@ -8,13 +8,17 @@ export enum WidgetPolicy {
     Top = 1,
 }
 
+/**
+ * Manages widget positioning based on screen size and policy
+ */
 @ccclass("GameAdjustWidget")
 export class GameAdjustWidget extends Component {
-    @property({ type: Widget })
-    widget: Widget = null;
+    @property({ type: Node })
+    private gameNode: Node = null;
 
     @property
     value: number = 0;
+
     @property({ type: Enum(WidgetPolicy) })
     protected _policy = WidgetPolicy.Bottom;
 
@@ -26,6 +30,12 @@ export class GameAdjustWidget extends Component {
     public set policy(value: WidgetPolicy) {
         this._policy = value;
         this.updateDisplay();
+    }
+
+    private gameWidget: Widget = null;
+
+    public onLoad(): void {
+        this.gameWidget = this.gameNode.getComponent(Widget);
     }
 
     public onEnable(): void {
@@ -44,17 +54,22 @@ export class GameAdjustWidget extends Component {
     }
 
     protected updateDisplay(): void {
-        this.node.getComponent(Widget).updateAlignment();
-        const height = this.node.getComponent(UITransform).height;
-        const offset = 230;
-        if (height > 764 + offset) {
-            if (this.policy === WidgetPolicy.Bottom) {
-                this.widget.verticalCenter = -this.value;
-            } else if (this.policy === WidgetPolicy.Top) {
-                this.widget.verticalCenter = this.value;
-            }
-        } else {
-            this.widget.verticalCenter = 0;
+        if (!this.gameWidget) return;
+
+        this.gameWidget.updateAlignment();
+
+        this.gameWidget.verticalCenter = this.calculateVerticalCenter();
+    }
+
+    private calculateVerticalCenter(): number {
+        const centerNodeHeight = this.node.getComponent(UITransform).height;
+        const scaleY = this.gameNode.scale.y;
+        const gameHeight = this.gameNode.getComponent(UITransform).height * scaleY;
+
+        if (this.value * gameHeight >= (centerNodeHeight - gameHeight) / 2) {
+            return 0;
         }
+
+        return this.policy === WidgetPolicy.Bottom ? -this.value : this.value;
     }
 }
