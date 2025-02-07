@@ -29,13 +29,11 @@ export class GameAdjustWidget extends Component {
     }
 
     public onEnable(): void {
-        this.node.parent.on(Node.EventType.SIZE_CHANGED, this.updateDisplay, this);
         this.node.on(Node.EventType.SIZE_CHANGED, this.updateDisplay, this);
         this.updateDisplay();
     }
 
     public onDisable(): void {
-        this.node.parent.off(Node.EventType.SIZE_CHANGED, this.updateDisplay, this);
         this.node.off(Node.EventType.SIZE_CHANGED, this.updateDisplay, this);
     }
 
@@ -46,15 +44,17 @@ export class GameAdjustWidget extends Component {
     }
 
     protected updateDisplay(): void {
-        this.node.parent.getComponent(Widget).updateAlignment();
-        const parentHeight = this.node.parent.getComponent(UITransform).height;
-        const offset = 300;
-        if (parentHeight > 1078 + offset) {
+        this.node.getComponent(Widget).updateAlignment();
+        const height = this.node.getComponent(UITransform).height;
+        const offset = 230;
+        if (height > 764 + offset) {
             if (this.policy === WidgetPolicy.Bottom) {
                 this.widget.verticalCenter = -this.value;
             } else if (this.policy === WidgetPolicy.Top) {
                 this.widget.verticalCenter = this.value;
             }
+        } else {
+            this.widget.verticalCenter = 0;
         }
     }
 }
