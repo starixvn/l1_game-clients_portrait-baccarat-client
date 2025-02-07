@@ -43,9 +43,16 @@ export class BaccaratScoreBoard extends Component {
         this.isExpandBeadRoad = !this.isExpandBeadRoad;
 
         const bigRoadZoomIn = this.nodeWrapperVertical.getChildByName("zoomInBigRoad");
-        const containerBigRoad = this.nodeBigRoad.getChildByName("container");
-        const containerZoomInBigRoad = bigRoadZoomIn.getChildByName("container");
-        const nodes = [this.nodeWrapperVertical, this.nodeBigRoad, bigRoadZoomIn, containerBigRoad, containerZoomInBigRoad];
+
+        const nodes = [
+            this.nodeWrapperVertical,
+            this.nodeBigRoad,
+            bigRoadZoomIn,
+            bigRoadZoomIn.children[0],
+            bigRoadZoomIn.children[1],
+            this.nodeBigRoad.children[0],
+            this.nodeBigRoad.children[1],
+        ];
 
         if (this.isExpandBeadRoad) {
             this.nodeBeadRoad.getComponent(UITransform).width = this.WIDTH_EXPAND_BEADROAD;
@@ -84,6 +91,11 @@ export class BaccaratScoreBoard extends Component {
                 this.nodeWrapperVertical.getChildByName(this.zoomModes.zoomInDerivedRoad).active = true;
                 break;
         }
+
+        if (!this.isExpandBeadRoad) {
+            return;
+        }
+        this.onClickExpandMode();
     }
 
     setWidthForNodes(nodes: Node[], width: number) {
