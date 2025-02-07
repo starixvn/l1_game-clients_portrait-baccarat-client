@@ -41,13 +41,12 @@ export class BaccaratScoreBoard extends Component {
 
     onClickExpandMode() {
         this.isExpandBeadRoad = !this.isExpandBeadRoad;
-        const bigRoadLayout = this.nodeBigRoad.getComponent(GridLayout);
 
         const bigRoadZoomIn = this.nodeWrapperVertical.getChildByName("zoomInBigRoad");
-        const bigRoadZoomInLayout = bigRoadZoomIn.getComponent(GridLayout);
         const containerBigRoad = this.nodeBigRoad.getChildByName("container");
         const containerZoomInBigRoad = bigRoadZoomIn.getChildByName("container");
         const nodes = [this.nodeWrapperVertical, this.nodeBigRoad, bigRoadZoomIn, containerBigRoad, containerZoomInBigRoad];
+
         if (this.isExpandBeadRoad) {
             this.nodeBeadRoad.getComponent(UITransform).width = this.WIDTH_EXPAND_BEADROAD;
             this.setWidthForNodes(nodes, this.WIDTH_GAME - this.WIDTH_SPACING - this.WIDTH_EXPAND_BEADROAD);
@@ -58,6 +57,9 @@ export class BaccaratScoreBoard extends Component {
             this.sprChangeModeBeadRoad.spriteFrame = this.mainAtlas.getSpriteFrame("stats-icon-zoom");
         }
         this.nodeContainer.getComponent(Layout).updateLayout();
+
+        const bigRoadLayout = this.nodeBigRoad.getComponent(GridLayout);
+        const bigRoadZoomInLayout = bigRoadZoomIn.getComponent(GridLayout);
         bigRoadLayout.scrollToEnd();
         bigRoadZoomInLayout.scrollToEnd();
     }
