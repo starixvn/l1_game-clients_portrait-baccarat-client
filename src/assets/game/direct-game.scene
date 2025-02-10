@@ -4873,7 +4873,7 @@
     "_id": "a3VrC51Z9CJIYkw/yf9K0u"
   },
   {
-    "__type__": "65d00swHDJGmpe908NqbMfM",
+    "__type__": "80b22hzKrBNc7CiPn0+Az0W",
     "_name": "",
     "_objFlags": 0,
     "__editorExtras__": {},
@@ -4883,7 +4883,7 @@
     "_enabled": true,
     "__prefab": null,
     "value": -0.1,
-    "_id": "39+NF8D45AXYAcJD63gJmp"
+    "_id": "edkbI4sBZAPI1s6/cYmdmF"
   },
   {
     "__type__": "cc.Node",
