@@ -47,12 +47,14 @@ export class BaccaratScoreBoard extends Component {
         const nodes = [
             this.nodeWrapperVertical,
             this.nodeBigRoad,
-            bigRoadZoomIn,
             bigRoadZoomIn.children[0],
             bigRoadZoomIn.children[1],
             this.nodeBigRoad.children[0],
             this.nodeBigRoad.children[1],
         ];
+        this.nodeWrapperVertical.children.forEach((child) => {
+            nodes.push(child);
+        });
 
         if (this.isExpandBeadRoad) {
             this.nodeBeadRoad.getComponent(UITransform).width = this.WIDTH_EXPAND_BEADROAD;
