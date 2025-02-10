@@ -467,6 +467,52 @@
       ],
       "subMetas": {}
     },
+    "c87df": {
+      "importer": "sprite-frame",
+      "uuid": "8dc478c1-8ea3-4618-80ee-95750b3fcbe5@c87df",
+      "displayName": "",
+      "id": "c87df",
+      "name": "bigroad_sub_line_green",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 230,
+        "trimY": 258,
+        "width": 14,
+        "height": 16,
+        "rawWidth": 14,
+        "rawHeight": 16,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "05805053-1fd7-47a0-b181-e25305ec15cd@6c48a",
+        "atlasUuid": "8dc478c1-8ea3-4618-80ee-95750b3fcbe5"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
     "a55fe": {
       "importer": "sprite-frame",
       "uuid": "8dc478c1-8ea3-4618-80ee-95750b3fcbe5@a55fe",
