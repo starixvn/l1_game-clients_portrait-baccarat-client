@@ -3,11 +3,6 @@ import { EDITOR } from "cc/env";
 
 const { ccclass, property } = _decorator;
 
-export enum WidgetPolicy {
-    Bottom = 0,
-    Top = 1,
-}
-
 /**
  * Manages widget positioning based on screen size and policy
  */
@@ -40,24 +35,24 @@ export class GameAdjustWidget extends Component {
     protected updateDisplay(): void {
         if (!this.gameWidget) return;
         this.gameWidget.verticalCenter = this.calculateVerticalCenter();
-        this.gameWidget.updateAlignment();
     }
 
     private calculateVerticalCenter(): number {
-        const nodeHeight = this.node.parent.getComponent(UITransform).height;
+        const parentHeight = this.node.parent.getComponent(UITransform).height;
         const scaleY = this.node.scale.y;
         const gameHeight = this.node.getComponent(UITransform).height * scaleY;
-        const deltaHeight = nodeHeight - gameHeight;
+        const deltaHeight = parentHeight - gameHeight;
         const maxOffset = deltaHeight / 2;
 
-        if (nodeHeight <= gameHeight) {
+        if (parentHeight <= gameHeight) {
             return 0;
         }
 
-        if (this.value * nodeHeight >= maxOffset) {
-            return -maxOffset / nodeHeight;
+        if (Math.abs(this.value) * parentHeight >= maxOffset) {
+            const normalizedOffset = maxOffset / parentHeight;
+            return this.value < 0 ? -normalizedOffset : normalizedOffset;
         }
 
-        return -this.value;
+        return this.value;
     }
 }
