@@ -38,7 +38,7 @@
       }
     ],
     "_prefab": {
-      "__id__": 23
+      "__id__": 20
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -389,7 +389,7 @@
     "fileId": "f8Ec7hY8lPrq/8z5pejdeV"
   },
   {
-    "__type__": "eb669RQ6uJEUry0v+qJhPEE",
+    "__type__": "417a7R1vvRJaYN/0HwsPxaP",
     "_name": "",
     "_objFlags": 0,
     "__editorExtras__": {},
@@ -406,46 +406,16 @@
     "highlight": {
       "__id__": 8
     },
-    "itemModel": [
-      {
-        "__id__": 20
-      },
-      {
-        "__id__": 21
-      },
-      {
-        "__id__": 22
-      }
-    ],
+    "itemModel": [],
+    "spriteAtlas": {
+      "__uuid__": "8dc478c1-8ea3-4618-80ee-95750b3fcbe5",
+      "__expectedType__": "cc.SpriteAtlas"
+    },
     "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "27/bfxvBVN1ZnLBmbX7pij"
-  },
-  {
-    "__type__": "LedLightItemModel",
-    "choiceNames": "player",
-    "backgroundForChoice": {
-      "__uuid__": "8dc478c1-8ea3-4618-80ee-95750b3fcbe5@223e7",
-      "__expectedType__": "cc.SpriteFrame"
-    }
-  },
-  {
-    "__type__": "LedLightItemModel",
-    "choiceNames": "banker",
-    "backgroundForChoice": {
-      "__uuid__": "8dc478c1-8ea3-4618-80ee-95750b3fcbe5@549b5",
-      "__expectedType__": "cc.SpriteFrame"
-    }
-  },
-  {
-    "__type__": "LedLightItemModel",
-    "choiceNames": "tie",
-    "backgroundForChoice": {
-      "__uuid__": "8dc478c1-8ea3-4618-80ee-95750b3fcbe5@df0d4",
-      "__expectedType__": "cc.SpriteFrame"
-    }
+    "fileId": "e80Xf37V1I/rtL3SuewODq"
   },
   {
     "__type__": "cc.PrefabInfo",
