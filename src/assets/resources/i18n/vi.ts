@@ -206,7 +206,7 @@ export const languages = {
         "glossary_banker": "Nhà Cái",
         "glossary_banker_pair": "Cái Đôi",
         "glossary_big": "Tài",
-        "glossary_player": "Người Chơi",
+        "glossary_player": "Nhà Con",
         "glossary_player_pair": "Con Đôi",
         "glossary_small": "Xỉu",
         "glossary_tie": "Hòa",
