@@ -1,4 +1,5 @@
 import { _decorator, Component, Layout, Node, Sprite, SpriteAtlas, UITransform } from "cc";
+import { Scoreboard } from "db://shared-components/game/scoreboards/scripts/components/scoreboard";
 import { GridLayout } from "db://shared-components/shared/common-components/grid-layout/scripts/components/grid-layout";
 
 const { ccclass, property } = _decorator;
@@ -22,6 +23,12 @@ export class BaccaratScoreBoard extends Component {
 
     @property(Sprite)
     sprChangeModeBeadRoad: Sprite = null;
+
+    @property(Scoreboard)
+    expandedBeadRoad: Scoreboard = null;
+
+    @property(Scoreboard)
+    collapsedBeadRoad: Scoreboard = null;
 
     private isExpandBeadRoad = false;
     private readonly zoomModes = {
@@ -60,10 +67,14 @@ export class BaccaratScoreBoard extends Component {
             this.nodeBeadRoad.getComponent(UITransform).width = this.WIDTH_EXPAND_BEADROAD;
             this.setWidthForNodes(nodes, this.WIDTH_GAME - this.WIDTH_SPACING - this.WIDTH_EXPAND_BEADROAD);
             this.sprChangeModeBeadRoad.spriteFrame = this.mainAtlas.getSpriteFrame("stats-icon-zoom-out");
+            this.expandedBeadRoad.node.active = true;
+            this.collapsedBeadRoad.node.active = false;
         } else {
             this.nodeBeadRoad.getComponent(UITransform).width = this.WIDTH_COLLAPSE_BEADROAD;
             this.setWidthForNodes(nodes, this.WIDTH_GAME - this.WIDTH_SPACING - this.WIDTH_COLLAPSE_BEADROAD);
             this.sprChangeModeBeadRoad.spriteFrame = this.mainAtlas.getSpriteFrame("stats-icon-zoom");
+            this.expandedBeadRoad.node.active = false;
+            this.collapsedBeadRoad.node.active = true;
         }
         this.nodeContainer.getComponent(Layout).updateLayout();
 
