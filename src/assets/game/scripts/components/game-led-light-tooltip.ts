@@ -1,12 +1,12 @@
 import gc from "@sg/game-client-base";
 import { _decorator, Label } from "cc";
-import { LedLightTooltip } from "db://shared-components/game/led-light/scripts/components/led-light-tooltip";
 import { GameBaccaratResultUtil } from "db://baccarat-shared-components/utils/game-result-util";
+import { LedLightTooltipAlignment } from "db://shared-components/game/led-light/scripts/components/led-light-tooltip-alignment";
 
 const { ccclass, property } = _decorator;
 
 @ccclass()
-export class GameLedLightToolTip extends LedLightTooltip {
+export class GameLedLightToolTip extends LedLightTooltipAlignment {
     @property(Label)
     lblPlayerTotalPoint: Label = null;
 
