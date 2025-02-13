@@ -1252,8 +1252,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 0.19,
-      "y": 0.19,
+      "x": 0.2,
+      "y": 0.2,
       "z": 1
     },
     "_mobility": 0,
@@ -1830,8 +1830,6 @@
       "__id__": 0
     },
     "fileId": "12cMA9L/BBq6kDj00F9RWB",
-    "instance": null,
-    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -2059,6 +2057,7 @@
       "__id__": 0
     },
     "fileId": "e6nH9Gu0ZLIr3BacMZxKW/",
+    "instance": null,
     "targetOverrides": null
   }
 ]
