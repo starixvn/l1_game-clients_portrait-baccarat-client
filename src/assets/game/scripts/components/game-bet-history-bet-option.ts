@@ -18,9 +18,9 @@ export default class GameBetHistoryBetOption extends Component {
             "Baccarat.glossary_big",
             "Baccarat.glossary_small",
             "Baccarat.glossary_banker",
-            "Baccarat.glossary_banker_pair",
+            "Baccarat.banker_pair_shorten",
             "Baccarat.glossary_player",
-            "Baccarat.glossary_player_pair",
+            "Baccarat.player_pair_shorten",
             "Baccarat.glossary_tie",
         ];
         choiceData.forEach((item, index) => {

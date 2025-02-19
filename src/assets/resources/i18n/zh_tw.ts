@@ -201,6 +201,7 @@ export const languages = {
         "you_reach_max_win": "您達到了最大勝利"
     },
     "Baccarat": {
+        "banker_pair_shorten": "莊對子",
         "banker_win": "莊家贏！",
         "game_icon_name": "百家樂",
         "game_name": "百家樂",
@@ -211,6 +212,7 @@ export const languages = {
         "glossary_player_pair": "閒家一對",
         "glossary_small": "小",
         "glossary_tie": "和",
+        "player_pair_shorten": "閒對子",
         "player_win": "閒家獲勝",
         "short_banker": "莊",
         "short_player": "閒",

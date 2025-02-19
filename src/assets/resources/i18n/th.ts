@@ -201,6 +201,7 @@ export const languages = {
         "you_reach_max_win": "คุณถึงยอดชนะสูงสุด"
     },
     "Baccarat": {
+        "banker_pair_shorten": "เจ้ามือคู่",
         "banker_win": "เจ้ามือชนะ!",
         "game_icon_name": "บาคาร่า",
         "game_name": "บาคาร่า",
@@ -211,6 +212,7 @@ export const languages = {
         "glossary_player_pair": "คู่ผู้เล่น",
         "glossary_small": "เล็ก",
         "glossary_tie": "เสมอ",
+        "player_pair_shorten": "ผู้เล่นคู่",
         "player_win": "ผู้้เล่นชนะ",
         "short_banker": "B",
         "short_player": "P",

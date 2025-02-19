@@ -201,6 +201,7 @@ export const languages = {
         "you_reach_max_win": "Bạn Đã Đạt Mức Tiền Thắng Tối Đa"
     },
     "Baccarat": {
+        "banker_pair_shorten": "Cái Đôi",
         "banker_win": "Nhà Cái Thắng",
         "game_icon_name": "Cào Baccarat",
         "game_name": "Cào Baccarat",
@@ -211,6 +212,7 @@ export const languages = {
         "glossary_player_pair": "Con Đôi",
         "glossary_small": "Xỉu",
         "glossary_tie": "Hòa",
+        "player_pair_shorten": "Con Đôi",
         "player_win": "NHÀ CON THẮNG",
         "short_banker": "B",
         "short_player": "P",

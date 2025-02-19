@@ -173,7 +173,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -293.1677198067632,
+      "x": -340.9309999999999,
       "y": 2.3980000000000246,
       "z": 0
     },
@@ -222,7 +222,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "Waktu",
+    "_string": "Time",
     "_horizontalAlign": 0,
     "_verticalAlign": 1,
     "_actualFontSize": 44,
@@ -285,7 +285,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 146.265625,
+      "width": 112.70703125,
       "height": 57.96
     },
     "_anchorPoint": {
@@ -355,8 +355,8 @@
     },
     "_alignFlags": 40,
     "_target": null,
-    "_left": -0.025555434379749362,
-    "_right": 0.7979493965381249,
+    "_left": 0.020187783061594283,
+    "_right": 0.8436926139794685,
     "_top": 0,
     "_bottom": 0,
     "_horizontalCenter": 0,
@@ -493,7 +493,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -171.38906280193245,
+      "x": -199.31200000000013,
       "y": 2.3980000000000246,
       "z": 0
     },
@@ -542,7 +542,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "Babak",
+    "_string": "Round",
     "_horizontalAlign": 0,
     "_verticalAlign": 1,
     "_actualFontSize": 44,
@@ -605,7 +605,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 138.83203125,
+      "width": 145.3203125,
       "height": 57.96
     },
     "_anchorPoint": {
@@ -675,8 +675,8 @@
     },
     "_alignFlags": 40,
     "_target": null,
-    "_left": 0.14749365083302796,
-    "_right": 0.6289236025238495,
+    "_left": 0.17153121225845394,
+    "_right": 0.6529611639492755,
     "_top": 0,
     "_bottom": 0,
     "_horizontalCenter": 0,
@@ -808,7 +808,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -53.04485990338165,
+      "x": -81.024,
       "y": 0,
       "z": 0
     },
@@ -1455,7 +1455,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 85.990338164251,
+      "width": 99.99999999999972,
       "height": 100
     },
     "_anchorPoint": {
@@ -1483,8 +1483,8 @@
     },
     "_alignFlags": 40,
     "_target": null,
-    "_left": 0.3651123188405798,
-    "_right": 0.514114734299517,
+    "_left": 0.34175845410628036,
+    "_right": 0.5374685990338166,
     "_top": 0,
     "_bottom": 0,
     "_horizontalCenter": 0,
@@ -1553,7 +1553,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 82.00210628019325,
+      "x": 73.28599999999997,
       "y": 2.3980000000000246,
       "z": 0
     },
@@ -1602,7 +1602,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "Pilihan \nTaruhan",
+    "_string": "Bet Choice",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 44,
@@ -1665,8 +1665,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 191.189453125,
-      "height": 99.44
+      "width": 233.40625,
+      "height": 55.44
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1735,8 +1735,8 @@
     },
     "_alignFlags": 40,
     "_target": null,
-    "_left": 0.4579461608896658,
-    "_right": 0.2276031657205836,
+    "_left": 0.4475638586956522,
+    "_right": 0.27054453502415465,
     "_top": 0,
     "_bottom": 0,
     "_horizontalCenter": 0,
@@ -1873,7 +1873,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 195.3208917761172,
+      "x": 268.577,
       "y": 2.3980000000000246,
       "z": 0
     },
@@ -1922,7 +1922,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "Taruhan",
+    "_string": "Stake",
     "_horizontalAlign": 0,
     "_verticalAlign": 1,
     "_actualFontSize": 44,
@@ -1985,12 +1985,12 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 191.189453125,
+      "width": 122.181640625,
       "height": 57.96
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
+      "x": 1,
       "y": 0.5
     },
     "_id": ""
@@ -2055,7 +2055,7 @@
     },
     "_alignFlags": 8,
     "_target": null,
-    "_left": 0.707195966987173,
+    "_left": 0.750587173535628,
     "_right": 0,
     "_top": 0,
     "_bottom": 0,
@@ -2193,7 +2193,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 306.09980676328513,
+      "x": 355.97000000000014,
       "y": 2.3980000000000246,
       "z": 0
     },
@@ -2242,7 +2242,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "Menang",
+    "_string": "Win",
     "_horizontalAlign": 0,
     "_verticalAlign": 1,
     "_actualFontSize": 44,
@@ -2305,7 +2305,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 176.708984375,
+      "width": 91.78125,
       "height": 57.96
     },
     "_anchorPoint": {
@@ -2375,8 +2375,8 @@
     },
     "_alignFlags": 40,
     "_target": null,
-    "_left": 0.7967924061783337,
-    "_right": -0.06303851169606277,
+    "_left": 0.8744919987922707,
+    "_right": 0.014661080917874214,
     "_top": 0,
     "_bottom": 0,
     "_horizontalCenter": 0,
@@ -2511,7 +2511,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 712,
+      "width": 828,
       "height": 50
     },
     "_anchorPoint": {
@@ -2607,7 +2607,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 712,
+      "width": 828,
       "height": 50
     },
     "_anchorPoint": {

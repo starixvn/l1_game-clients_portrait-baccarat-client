@@ -476,7 +476,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 216,
+      "x": 260.701,
       "y": 0,
       "z": 0
     },
@@ -635,7 +635,7 @@
     "_alignFlags": 32,
     "_target": null,
     "_left": 0,
-    "_right": 30,
+    "_right": -14.701000000000022,
     "_top": 0,
     "_bottom": 0,
     "_horizontalCenter": 0,
@@ -671,7 +671,7 @@
     "_alignFlags": 32,
     "_target": null,
     "_left": 0,
-    "_right": 30,
+    "_right": -14.701000000000022,
     "_top": 0,
     "_bottom": 0,
     "_horizontalCenter": 0,
@@ -766,6 +766,7 @@
       "__id__": 0
     },
     "fileId": "96/EKjqHxOmLs1USxcui3e",
+    "instance": null,
     "targetOverrides": null
   }
 ]

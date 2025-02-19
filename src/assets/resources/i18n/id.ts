@@ -201,6 +201,7 @@ export const languages = {
         "you_reach_max_win": "Anda mencapai Maksimal Menang"
     },
     "Baccarat": {
+        "banker_pair_shorten": "B. Pair",
         "banker_win": "Banker Menang!",
         "game_icon_name": "Bakarat",
         "game_name": "Bakarat",
@@ -211,6 +212,7 @@ export const languages = {
         "glossary_player_pair": "Player Pair",
         "glossary_small": "Kecil",
         "glossary_tie": "Seri",
+        "player_pair_shorten": "P. Pair",
         "player_win": "PLAYER MENANG",
         "short_banker": "B",
         "short_player": "P",

@@ -201,6 +201,7 @@ export const languages = {
         "you_reach_max_win": "You reached the max win"
     },
     "Baccarat": {
+        "banker_pair_shorten": "B. Pair",
         "banker_win": "BANKER WIN",
         "game_icon_name": "Baccarat",
         "game_name": "Baccarat",
@@ -211,6 +212,7 @@ export const languages = {
         "glossary_player_pair": "Player pair",
         "glossary_small": "Small",
         "glossary_tie": "Tie",
+        "player_pair_shorten": "P. Pair",
         "player_win": "PLAYER WIN",
         "short_banker": "B",
         "short_player": "P",
