@@ -28,6 +28,7 @@ const defaultConfig: gc.Configs.SiteConfigs = {
     tolgeeUrl: "",
     storagePrefixKey: "portrait_baccarat",
     backgroundNoTranslate: true,
+    boostedOddsDelayTimeByMinutes: 1,
 };
 
 let configDev = {
