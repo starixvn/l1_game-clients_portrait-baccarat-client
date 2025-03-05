@@ -24,6 +24,9 @@ const defaultConfig: gc.Configs.SiteConfigs = {
         proxyPath: "baccarat",
         route: "baccarat",
     },
+    websocketOptions: {
+        timeout: 3000,
+    },
     mainObserverNamespace: "Baccarat",
     tolgeeUrl: "",
     storagePrefixKey: "portrait_baccarat",
