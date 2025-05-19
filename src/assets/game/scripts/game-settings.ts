@@ -3,10 +3,12 @@ import { LogStore } from "db://shared-components/game/scripts/stores/log-store";
 
 import { sharedContainer } from "../../scripts/shared-container";
 
+const GAME_NAME = "Baccarat";
 export const settings = {
     id: 10,
-    name: "Baccarat",
-    namespaces: ["Baccarat"],
+    name: GAME_NAME,
+    observerNamespace: GAME_NAME,
+    namespaces: [GAME_NAME],
     durations: {
         wholeRound: 45,
         lockingBet: 3,
