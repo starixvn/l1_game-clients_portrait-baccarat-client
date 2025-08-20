@@ -1,22 +1,30 @@
 {
-    "gameNames": {
-        "en": "Baccarat",
-        "id": "Bakarat",
-        "th": "บาคาร่า",
-        "vi": "Cào Baccarat",
-        "zh_cn": "Cào Baccarat",
-        "zh_tw": "百家樂",
-        "ja": "バカラ",
-        "es": "Baccarat"
-    },
     "lobbyNames": {
         "en": "Baccarat",
+        "es": "Baccarat",
+        "fil_ph": "Baccarat",
         "id": "Bakarat",
-        "th": "บาคาร่า",
-        "vi": "Cào Baccarat",
-        "zh_cn": "Cào Baccarat",
-        "zh_tw": "百家樂",
         "ja": "バカラ",
-        "es": "Baccarat"
+        "ko": "바카라",
+        "pt_br": "Baccarat",
+        "th": "บาคาร่า",
+        "tr": "Baccarat",
+        "vi": "Cào Baccarat",
+        "zh_cn": "百家乐",
+        "zh_tw": "百家樂"
+    },
+    "gameNames": {
+        "en": "Baccarat",
+        "es": "Baccarat",
+        "fil_ph": "Baccarat",
+        "id": "Bakarat",
+        "ja": "バカラ",
+        "ko": "바카라",
+        "pt_br": "Baccarat",
+        "th": "บาคาร่า",
+        "tr": "Baccarat",
+        "vi": "Cào Baccarat",
+        "zh_cn": "百家乐",
+        "zh_tw": "百家樂"
     }
 }
