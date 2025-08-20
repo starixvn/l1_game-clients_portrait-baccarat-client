@@ -43,7 +43,7 @@ export default class Game extends GameComponent {
     protected enableFixHandleFinish = true;
     private audioContainer: AudioContainer = null;
     private winningResult: WinningResult = null;
-    private soundWinChoice = ["banker", "player", "tie"];
+    private readonly soundWinChoice = ["banker", "player", "tie"];
     private isAnimatingResult = false;
 
     onLoad() {
