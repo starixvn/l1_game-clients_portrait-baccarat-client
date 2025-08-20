@@ -88,5 +88,50 @@
         "bundle": "resources",
         "path": "winning/tie-zh_tw",
         "isLazyLoad": true
+    },
+    "player-ko": {
+        "bundle": "resources",
+        "path": "winning/player_ko",
+        "isLazyLoad": true
+    },
+    "banker-ko": {
+        "bundle": "resources",
+        "path": "winning/banker_ko",
+        "isLazyLoad": true
+    },
+    "tie-ko": {
+        "bundle": "resources",
+        "path": "winning/tie_ko",
+        "isLazyLoad": true
+    },
+    "player-tr": {
+        "bundle": "resources",
+        "path": "winning/player_tr",
+        "isLazyLoad": true
+    },
+    "banker-tr": {
+        "bundle": "resources",
+        "path": "winning/banker_tr",
+        "isLazyLoad": true
+    },
+    "tie-tr": {
+        "bundle": "resources",
+        "path": "winning/tie_tr",
+        "isLazyLoad": true
+    },
+    "player-fil_ph": {
+        "bundle": "resources",
+        "path": "winning/player_fil_ph",
+        "isLazyLoad": true
+    },
+    "banker-fil_ph": {
+        "bundle": "resources",
+        "path": "winning/banker_fil_ph",
+        "isLazyLoad": true
+    },
+    "tie-fil_ph": {
+        "bundle": "resources",
+        "path": "winning/tie_fil_ph",
+        "isLazyLoad": true
     }
 }

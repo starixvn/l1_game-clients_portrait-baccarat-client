@@ -249,7 +249,7 @@ export const languages = {
         "glossary_player_pair": "플레이어 페어",
         "glossary_tie": "무승부",
         "short_player": "P",
-        "short_banker": "대",
+        "short_banker": "B",
         "player_pair_shorten": "플레이어 페어",
         "banker_pair_shorten": "뱅커 페어"
     }

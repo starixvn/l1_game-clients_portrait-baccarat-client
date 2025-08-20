@@ -240,18 +240,18 @@ export const languages = {
         "game_name": "Baccarat",
         "glossary_big": "Büyük",
         "glossary_small": "Küçük",
-        "banker_win": "BANKACI KAZANIR",
-        "player_win": "OYUNCU KAZANIR",
+        "banker_win": "BANKER KAZANIR",
+        "player_win": "PLAYER KAZANIR",
         "tie_win": "Berabere",
-        "glossary_banker": "Kasa",
-        "glossary_banker_pair": "Kasa Çifti",
-        "glossary_player": "Oyuncu",
-        "glossary_player_pair": "Oyuncu Çifti",
+        "glossary_banker": "BANKER",
+        "glossary_banker_pair": "Banker Pair",
+        "glossary_player": "Player",
+        "glossary_player_pair": "Player Pair",
         "glossary_tie": "Berabere",
         "short_player": "P",
-        "short_banker": "Büyük",
-        "player_pair_shorten": "Oyuncu Çifti",
-        "banker_pair_shorten": "Bankacı Çifti"
+        "short_banker": "B",
+        "player_pair_shorten": "P. Pair",
+        "banker_pair_shorten": "B. Pair"
     }
 };
 
