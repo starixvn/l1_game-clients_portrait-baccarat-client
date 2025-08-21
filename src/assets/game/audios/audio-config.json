@@ -133,5 +133,35 @@
         "bundle": "resources",
         "path": "winning/tie_fil_ph",
         "isLazyLoad": true
+    },
+    "player-ja": {
+        "bundle": "resources",
+        "path": "winning/player-ja",
+        "isLazyLoad": true
+    },
+    "banker-ja": {
+        "bundle": "resources",
+        "path": "winning/banker-ja",
+        "isLazyLoad": true
+    },
+    "tie-ja": {
+        "bundle": "resources",
+        "path": "winning/tie-ja",
+        "isLazyLoad": true
+    },
+    "player-es": {
+        "bundle": "resources",
+        "path": "winning/player-es",
+        "isLazyLoad": true
+    },
+    "banker-es": {
+        "bundle": "resources",
+        "path": "winning/banker-es",
+        "isLazyLoad": true
+    },
+    "tie-es": {
+        "bundle": "resources",
+        "path": "winning/tie-es",
+        "isLazyLoad": true
     }
 }
