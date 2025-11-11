@@ -2,7 +2,6 @@ import gc from "@sg/game-client-base";
 import { _decorator, Button, instantiate, Label, Node, Prefab } from "cc";
 import { BetHistoryNewBodyItem } from "db://shared-components/game/bet-history-new/scripts/bet-history-new-body-item";
 import { BetHistoryBodyItemType } from "db://shared-components/game/bet-history/scripts/components/bet-history-body-item";
-
 import GameBetHistoryBetOption from "./game-bet-history-bet-option";
 
 const { ccclass, property } = _decorator;
@@ -48,7 +47,7 @@ export class GameBetHistoryBodyItem extends BetHistoryNewBodyItem {
                 if (+stake > 0) {
                     stake = freeBet ? 0 : stake;
                     const odd = this.getFormatOdd(odds[choice]?.toString(), data?.fractionalOddsFormat);
-                    option.handleBetOptionItem(choice, odd, FormatUtils.numberWithCommas(stake));
+                    option.handleBetOptionItem(choice, odd, FormatUtils.numberWithCommas(stake, 2));
                     option.highlightForWinning(settlementResult[choice]);
                     this.betOption.addChild(node);
                 }
